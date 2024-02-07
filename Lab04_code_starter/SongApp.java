@@ -16,7 +16,11 @@ public class SongApp {
 //		
 //		System.out.println("\nCheck error ------------------------");
 //		System.out.print("Add duplicate song: ");
+<<<<<<< HEAD
 //		myPlaylist.addSong(new Song("Perfect", 3.38));
+=======
+		myPlaylist.addSong(new Song("Perfect", 3.38));
+>>>>>>> parent of cc7df69 (add song at index)
 //		
 //		System.out.print("Add song at invalid index (at most index now is 2): ");
 //		myPlaylist.addSongAtIndex(new Song("Find you", 3.38), 3);

@@ -20,6 +20,7 @@ public class Playlist {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	      }
 		 
 		
@@ -33,6 +34,9 @@ public class Playlist {
 			 System.out.println("Perfect" + "already in the playlist");
 	      }
 		 
+=======
+	        }
+>>>>>>> parent of cc7df69 (add song at index)
 =======
 	        }
 >>>>>>> parent of cc7df69 (add song at index)
