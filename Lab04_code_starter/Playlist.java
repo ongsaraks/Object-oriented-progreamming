@@ -1,55 +1,33 @@
+import java.util.*;
 public class Playlist {
 	private String playlistName;
-	private Array<Song>songs;
+	private ArrayList<Song> songs;
 	
 	public Playlist(String N){
-	 playlistName = N;
-	 Arr	
-		
+	 playlistName = N;	
+	 this.songs = new ArrayList<Song>();
+	
 	}
-<<<<<<< HEAD
 	public boolean addSong(Song song) {
-//	    songs.add(song);
-//        return true;
 		 if (!songs.contains(song)) {
-	            songs.add(song);
+			 	songs.add(song);
 	            return true;
-	        } else {
-	            System.out.println("Add duplicate song: " + song.getTitle() + " already in the playlist.");
+	      }
+		 else{
 	            return false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	      }
 		 
 		
 	}
-	public void addSongAtIndex(Song song, int index) {
+	boolean addSongAtIndex(Song song, int index) {
 		 if (!songs.contains(song)) {
-			 songs.add(index,song);
-	        
+			 	songs.add(index,song);
+	            return true;
 	      }
-		 else if(songs.contains(song)){
-			 System.out.println("Perfect" + "already in the playlist");
+		 else{
+	            return false;
 	      }
-		 
-=======
-	        }
->>>>>>> parent of cc7df69 (add song at index)
-=======
-	        }
->>>>>>> parent of cc7df69 (add song at index)
-=======
-	        }
->>>>>>> parent of cc7df69 (add song at index)
-=======
-	        }
->>>>>>> parent of cc7df69 (add song at index)
 	}
-//	boolean addSongAtIndex(Song song, int index) {
-//		
-//	}
 //	boolean removeSongByIndex(int index) {
 //		 
 //	}
@@ -64,14 +42,10 @@ public class Playlist {
 //	}
 	void showPlaylist() {
 		System.out.println(playlistName);
-		for(Song i:songs) {
-			System.out.println(i);
+		int j = 0;
+		for(Song i:songs) {	
+			System.out.printf("[%d]" + i+"\n",j);
+			j++;
 		}
 }
 }
-	
-=======
->>>>>>> parent of 0207847 (add song)
-	
-}
-
