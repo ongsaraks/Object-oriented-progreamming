@@ -18,6 +18,7 @@ public class Playlist {
 	            System.out.println("Add duplicate song: " + song.getTitle() + " already in the playlist.");
 	            return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	      }
 		 
 		
@@ -31,6 +32,9 @@ public class Playlist {
 			 System.out.println("Perfect" + "already in the playlist");
 	      }
 		 
+=======
+	        }
+>>>>>>> parent of cc7df69 (add song at index)
 =======
 	        }
 >>>>>>> parent of cc7df69 (add song at index)
