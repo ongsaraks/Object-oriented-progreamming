@@ -1,11 +1,10 @@
-
 public class Playlist {
 	private String playlistName;
-	private double min;
+	private Array<Song>songs;
 	
 	public Playlist(String N){
-	 this.Name = N;
-	 this
+	 playlistName = N;
+	 Arr	
 		
 	}
 	
