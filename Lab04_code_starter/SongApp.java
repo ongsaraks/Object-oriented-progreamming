@@ -5,8 +5,8 @@ public class SongApp {
 		System.out.println("\nAdd songs --------------------------");
 		myPlaylist.addSong(new Song("Perfect", 4.21));
 		myPlaylist.addSong(new Song("How long", 3.30));
-		myPlaylist.addSongAtIndex(new Song("End Game", 4.11), 0);
-		myPlaylist.addSongAtIndex(new Song("Anywhere", 3.35), 2);
+//		myPlaylist.addSongAtIndex(new Song("End Game", 4.11), 0);
+//		myPlaylist.addSongAtIndex(new Song("Anywhere", 3.35), 2);
 		myPlaylist.showPlaylist();
 	
 //		System.out.println("\nRemove songs -----------------------");
