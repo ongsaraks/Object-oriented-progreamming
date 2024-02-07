@@ -1,12 +1,47 @@
+import java.util.ArrayList;
 public class Playlist {
 	private String playlistName;
-	private Array<Song>songs;
+	private ArrayList<Song> songs;
 	
 	public Playlist(String N){
-	 playlistName = N;
-	 Arr	
-		
-	}
+	 playlistName = N;	
+	 this.songs = new ArrayList<Song>();
 	
+	}
+	public boolean addSong(Song song) {
+//	    songs.add(song);
+//        return true;
+		 if (!songs.contains(song)) {
+	            songs.add(song);
+	            return true;
+	        } else {
+	            System.out.println("Add duplicate song: " + song.getTitle() + " already in the playlist.");
+	            return false;
+	        }
+	}
+//	boolean addSongAtIndex(Song song, int index) {
+//		
+//	}
+//	boolean removeSongByIndex(int index) {
+//		 
+//	}
+//	Song removeSongByTitle(String title) {
+//		 
+//	}
+//	double getPlaylistDuration() {
+//		
+//	}
+//	ArrayList<Song> getTooLongSongs (double minute){
+//	
+//	}
+	void showPlaylist() {
+		System.out.println(playlistName);
+		for(Song i:songs) {
+			System.out.println(i);
+		}
 }
+}
+	
+	
+
 
