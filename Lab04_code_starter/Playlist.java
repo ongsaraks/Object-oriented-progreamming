@@ -9,19 +9,25 @@ public class Playlist {
 	
 	}
 	public boolean addSong(Song song) {
-//	    songs.add(song);
-//        return true;
 		 if (!songs.contains(song)) {
-	            songs.add(song);
+			 	songs.add(song);
 	            return true;
-	        } else {
-	            System.out.println("Add duplicate song: " + song.getTitle() + " already in the playlist.");
+	      }
+		 else{
 	            return false;
-	        }
+	      }
+		 
+		
 	}
-//	boolean addSongAtIndex(Song song, int index) {
-//		
-//	}
+	boolean addSongAtIndex(Song song, int index) {
+		 if (!songs.contains(song)) {
+			 	songs.add(index,song);
+	            return true;
+	      }
+		 else{
+	            return false;
+	      }
+	}
 //	boolean removeSongByIndex(int index) {
 //		 
 //	}
@@ -36,8 +42,10 @@ public class Playlist {
 //	}
 	void showPlaylist() {
 		System.out.println(playlistName);
-		for(Song i:songs) {
-			System.out.println(i);
+		int j = 0;
+		for(Song i:songs) {	
+			System.out.printf("[%d]" + i+"\n",j);
+			j++;
 		}
 }
 }
