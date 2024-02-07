@@ -28,18 +28,18 @@ public class Playlist {
 	            return false ;
 	      }
 	}
-//	public boolean removeSongByIndex(int index) {
-//		 
-//	}
-//	publicSong removeSongByTitle(String title) {
-//		 
-//	}
-//	public double getPlaylistDuration() {
-//		
-//	}
-//	public ArrayList<Song> getTooLongSongs (double minute){
-//	
-//	}
+	public boolean removeSongByIndex(int index) {
+		 
+	}
+	publicSong removeSongByTitle(String title) {
+		 
+	}
+	public double getPlaylistDuration() {
+		
+	}
+	public ArrayList<Song> getTooLongSongs (double minute){
+	
+	}
 	public void showPlaylist() {
 		System.out.println(playlistName);
 		int j = 0;
