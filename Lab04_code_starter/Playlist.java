@@ -1,13 +1,13 @@
-import java.util.ArrayList;
 public class Playlist {
 	private String playlistName;
-	private ArrayList<Song> songs;
+	private Array<Song>songs;
 	
 	public Playlist(String N){
-	 playlistName = N;	
-	 this.songs = new ArrayList<Song>();
-	
+	 playlistName = N;
+	 Arr	
+		
 	}
+<<<<<<< HEAD
 	public boolean addSong(Song song) {
 //	    songs.add(song);
 //        return true;
@@ -66,6 +66,8 @@ public class Playlist {
 }
 }
 	
+=======
+>>>>>>> parent of 0207847 (add song)
 	
-
+}
 
