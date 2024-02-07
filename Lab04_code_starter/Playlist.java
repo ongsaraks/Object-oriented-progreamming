@@ -19,28 +19,28 @@ public class Playlist {
 		 
 		
 	}
-	boolean addSongAtIndex(Song song, int index) {
+	public boolean addSongAtIndex(Song song, int index) {
 		 if (!songs.contains(song)) {
 			 	songs.add(index,song);
 	            return true;
 	      }
 		 else{
-	            return false;
+	            return false ;
 	      }
 	}
-//	boolean removeSongByIndex(int index) {
+//	public boolean removeSongByIndex(int index) {
 //		 
 //	}
-//	Song removeSongByTitle(String title) {
+//	publicSong removeSongByTitle(String title) {
 //		 
 //	}
-//	double getPlaylistDuration() {
+//	public double getPlaylistDuration() {
 //		
 //	}
-//	ArrayList<Song> getTooLongSongs (double minute){
+//	public ArrayList<Song> getTooLongSongs (double minute){
 //	
 //	}
-	void showPlaylist() {
+	public void showPlaylist() {
 		System.out.println(playlistName);
 		int j = 0;
 		for(Song i:songs) {	
