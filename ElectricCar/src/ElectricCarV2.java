@@ -1,4 +1,3 @@
-
 class ElectricCarV2 {
 	private String brand;
 	private String model;

@@ -1,6 +1,13 @@
 
 public class Playlist {
-	private String PlaylistName;
-	private String Song;
+	private String playlistName;
+	private double min;
+	
+	public Playlist(String N){
+	 this.Name = N;
+	 this
+		
+	}
 	
 }
+
