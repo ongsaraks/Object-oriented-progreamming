@@ -19,14 +19,15 @@ public class Playlist {
 		 
 		
 	}
-	boolean addSongAtIndex(Song song, int index) {
+	public void addSongAtIndex(Song song, int index) {
 		 if (!songs.contains(song)) {
-			 	songs.add(index,song);
-	            return true;
+			 songs.add(index,song);
+	        
 	      }
-		 else{
-	            return false;
+		 else if(songs.contains(song)){
+			 System.out.println("Perfect" + "already in the playlist");
 	      }
+		 
 	}
 //	boolean removeSongByIndex(int index) {
 //		 
