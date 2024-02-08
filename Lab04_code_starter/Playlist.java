@@ -8,9 +8,17 @@ public class Playlist {
 	 this.songs = new ArrayList<Song>();
 	
 	}
-//	public boolean addSong(Song song) {
-//
-//	}
+	public boolean addSong(Song song) {
+		if(!songs.contains(song)) {
+				songs.add(new Song(song.getTitle(),song.getDuration()));
+				return true;
+			}
+			else {
+				System.out.println(song.getTitle() + " Already in the playlist"); 
+				return false;
+			}
+		}
+
 //	public boolean addSongAtIndex(Song song, int index) {
 //		if(index < 0 || index > songs.size()) {
 //			System.out.println("Invalid index");

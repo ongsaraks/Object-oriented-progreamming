@@ -37,6 +37,7 @@ public class Song {
 	public String toString() {
 		return this.title + " (" + String.format("%.2f", this.duration) +")";
 	}
+
 	
 	
 }

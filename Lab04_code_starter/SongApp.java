@@ -5,8 +5,8 @@ public class SongApp {
 		System.out.println("\nAdd songs --------------------------");
 		myPlaylist.addSong(new Song("Perfect", 4.21));
 		myPlaylist.addSong(new Song("How long", 3.30));
-		myPlaylist.addSongAtIndex(new Song("End Game", 4.11), 0);
-		myPlaylist.addSongAtIndex(new Song("Anywhere", 3.35), 2);
+//		myPlaylist.addSongAtIndex(new Song("End Game", 4.11), 0);
+//		myPlaylist.addSongAtIndex(new Song("Anywhere", 3.35), 2);
 		myPlaylist.showPlaylist();
  
 //		System.out.println("\nRemove songs -----------------------");
@@ -17,9 +17,9 @@ public class SongApp {
 		System.out.println("\nCheck error ------------------------");
 		System.out.print("Add duplicate song: ");
 		myPlaylist.addSong(new Song("Perfect", 3.38)); //3.38
-		System.out.print("Add song at invalid index (at most index now is 2): ");
+//		System.out.print("Add song at invalid index (at most index now is 2): ");
 //		myPlaylist.addSongAtIndex(new Song("Find you", 3.38), 3);
-		System.out.print("Remove not found song: ");
+//		System.out.print("Remove not found song: ");
 //		myPlaylist.removeSongByTitle("Find you");
 //		System.out.print("Remove song at invalid index: ");
 //		myPlaylist.removeSongByIndex(3);
