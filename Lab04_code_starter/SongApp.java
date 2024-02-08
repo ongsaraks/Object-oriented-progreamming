@@ -18,7 +18,7 @@ public class SongApp {
 		System.out.print("Add duplicate song: ");
 		myPlaylist.addSong(new Song("Perfect", 3.38)); //3.38
 		System.out.print("Add song at invalid index (at most index now is 2): ");
-		myPlaylist.addSongAtIndex(new Song("Find you", 3.38), 3);
+//		myPlaylist.addSongAtIndex(new Song("Find you", 3.38), 3);
 		System.out.print("Remove not found song: ");
 //		myPlaylist.removeSongByTitle("Find you");
 //		System.out.print("Remove song at invalid index: ");
