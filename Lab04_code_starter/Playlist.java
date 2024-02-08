@@ -69,10 +69,14 @@ public class Playlist {
     }
 
     
-//    public double getPlaylistDuration() {
-//
-//    }
-//
+    public double getPlaylistDuration() {
+    	double sum = 0;
+    	for(int i = 0; i < songs.size();i++) {
+    		sum += songs.get(i).getDuration() + songs.get(i).getDurationSec();
+    	}
+    	return sum;
+    }
+
 //    public ArrayList<Song> getTooLongSongs(double minute) {
 //
 //    }
