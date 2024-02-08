@@ -9,14 +9,23 @@ public class Playlist {
 	
 	}
 	public boolean addSong(Song song) {
-		if(!songs.contains(song)) {
-				songs.add(new Song(song.getTitle(),song.getDuration()));
+			if(!songs.contains(song)) {
+				songs.add(song);
 				return true;
 			}
 			else {
 				System.out.println(song.getTitle() + " Already in the playlist"); 
 				return false;
 			}
+		
+//		if(!songs.contains(song)) {
+//				songs.add(new Song(song.getTitle(),song.getDuration()));
+//				return true;
+//			}
+//			else {
+//				System.out.println(song.getTitle() + " Already in the playlist"); 
+//				return false;
+//			}
 		}
 
 //	public boolean addSongAtIndex(Song song, int index) {
