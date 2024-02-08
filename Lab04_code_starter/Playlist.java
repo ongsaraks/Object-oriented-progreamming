@@ -1,66 +1,73 @@
 import java.util.*;
 public class Playlist {
-	private String playlistName;
-	private ArrayList<Song> songs;
-	
+	String playlistName;
+	ArrayList<Song> songs;
 	public Playlist(String N){
 	 playlistName = N;	
 	 this.songs = new ArrayList<Song>();
 	
 	}
 	public boolean addSong(Song song) {
-			if(!songs.contains(song)) {
-				songs.add(song);
-				return true;
-			}
-			else {
-				System.out.println(song.getTitle() + " Already in the playlist"); 
+		for(int i = 0;i < songs.size();i++) {
+			if (songs.get(i).getTitle()== song.getTitle()) {
+				System.out.println(songs.get(i).getTitle()+" already in the playlist. ");				
 				return false;
+			} 
+			
 			}
-		
-//		if(!songs.contains(song)) {
-//				songs.add(new Song(song.getTitle(),song.getDuration()));
-//				return true;
-//			}
-//			else {
-//				System.out.println(song.getTitle() + " Already in the playlist"); 
-//				return false;
-//			}
+		songs.add(song);
+		return true;
 		}
 
-//	public boolean addSongAtIndex(Song song, int index) {
-//		if(index < 0 || index > songs.size()) {
-//			System.out.println("Invalid index");
-//		}
-//		if (!songs.contains(song)) {
-//				songs.add(index,song);
-//	            return true;
-//		 }
-//		 else{
-//			 	System.out.println(song.getTitle() + "already in the playlist. ");
-//			 	return false;
-//	      }
-//	
-//	}
-//	public boolean removeSongByIndex(int index) {
-//		 if(index < 0 || index > songs.size()) {
-//				System.out.println("Invalid index");
-//				return false;
-//			}
-//		 else {
-//			 songs.remove(index);
-//			 return true;
-//		 }
-//	}
-//    Song removeSongByTitle(String title) {
-//        for (int i = 0; i < songs.size(); i++) {
-//            if (songs.get(i).getTitle().equals(title)) {
-//                return songs.remove(i);
-//            }
-//        }
-//        System.out.println("Remove not found song: Not found.");
-//        return null;
-//    }
+	boolean addSongAtIndex(Song song, int index) {
+		if(index < 0 || index > songs.size()) {
+			System.out.println("Invalid index");
+		}
+		if (!songs.contains(song)){
+			songs.add(index,song);
+			return true;
+		}
+			return false;
+		
+	}
+	boolean removeSongByIndex(int index) {
+		 if(index < 0 || index > songs.size()-1) {
+				System.out.println("Invalid index");
+				return false;
+			}
+		 else {
+			 songs.remove(index);
+			 return true;
+		 }
+	}
+    public Song removeSongByTitle(String title) {
+    		int check = 0;   
+		
+		for(int i = 0; i <  songs.size();i++) {
+        	   if(title == songs.get(i).getTitle()) {
+        		   songs.remove(i);
+        		   check++;
+        		   break;
+        	   }  
+           }
+		if(check == 0){
+           System.out.println("Not found.");
+		}
+		return null;
+//    	int check = 0;
+//    	for(int i = 0; i < songs.size();i++) {
+//    		if(title == songs.get(i).getTitle()) {
+//    			songs.remove(i);
+//    			check++;
+//    	    }
+//    	}
+//    	if (check == 0) {
+//    		System.out.println("Not Found.");
+//    	}
+//		return null;  	
+    }
+
+    
 //    public double getPlaylistDuration() {
 //
 //    }
@@ -72,9 +79,14 @@ public class Playlist {
 	public void showPlaylist() {
 		System.out.println(playlistName);
 		int j = 0;
-		for(Song i:songs) {	
-			System.out.printf("[%d]" + i+"\n",j);
+		for(Song i:songs) {
+			System.out.printf("[%d]" + i +"\n",j);
 			j++;
+		
 		}
-}
-}
+		}
+		
+		
+				
+		}
+		

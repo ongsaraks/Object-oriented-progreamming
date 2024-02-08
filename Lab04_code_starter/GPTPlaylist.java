@@ -10,7 +10,7 @@ public class GPTPlaylist {
     }
 
     public boolean addSong(Song song) {
-        if (!songs.contains(song)) {
+        if (findSong(song.getTitle()) == null) {
             songs.add(song);
             return true;
         } else {
@@ -21,10 +21,10 @@ public class GPTPlaylist {
 
     public boolean addSongAtIndex(Song song, int index) {
         if (index < 0 || index > songs.size()) {
-            System.out.println("Add song at invalid index (at most index now is " + (songs.size() - 1) + "): Invalid Index");
+            System.out.println("Invalid Index");
             return false;
         }
-        if (!songs.contains(song)) {
+        if (findSong(song.getTitle()) == null) {
             songs.add(index, song);
             return true;
         } else {
@@ -35,7 +35,7 @@ public class GPTPlaylist {
 
     public boolean removeSongByIndex(int index) {
         if (index < 0 || index >= songs.size()) {
-            System.out.println("Remove song at invalid index: Invalid Index");
+            System.out.println("Invalid Index");
             return false;
         }
         songs.remove(index);
@@ -43,13 +43,14 @@ public class GPTPlaylist {
     }
 
     public Song removeSongByTitle(String title) {
-        for (int i = 0; i < songs.size(); i++) {
-            if (songs.get(i).getTitle().equals(title)) {
-                return songs.remove(i);
-            }
+        Song songToRemove = findSong(title);
+        if (songToRemove != null) {
+            songs.remove(songToRemove);
+            return songToRemove;
+        } else {
+            System.out.println("Remove not found song: " + title);
+            return null;
         }
-        System.out.println("Remove not found song: Not found.");
-        return null;
     }
 
     public double getPlaylistDuration() {
@@ -77,7 +78,17 @@ public class GPTPlaylist {
         }
     }
 
-    // Bonus Methods
+    private Song findSong(String title) {
+        for (Song song : songs) {
+            if (song.getTitle().equals(title)) {
+                return song;
+            }
+        }
+        return null;
+    }
+
+    // Bonus methods
+
     public void moveUp(int position) {
         if (position > 0 && position < songs.size()) {
             Song temp = songs.get(position);
