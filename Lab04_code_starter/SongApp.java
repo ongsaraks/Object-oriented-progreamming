@@ -26,18 +26,18 @@ public class SongApp {
 		
 		
 		// Uncomment these for bonus
-//		System.out.println("\n**************** BONUS ***************");
-//		Playlist bonus = new Playlist("Bonus Playlist");
-//		bonus.addSong(new Song("Perfect", 4.21));
-//		bonus.addSong(new Song("How long", 3.30));
-//		bonus.addSongAtIndex(new Song("End Game", 4.11), 0);
-//		bonus.addSongAtIndex(new Song("Anywhere", 3.35), 2);
-//		bonus.showPlaylist();
-//		
-//		System.out.println("\nRearrange songs ---------------------");
-//		bonus.moveUp(1);
-//		bonus.moveDown(2);
-//		bonus.showPlaylist();
+		System.out.println("\n**************** BONUS ***************");
+		Playlist bonus = new Playlist("Bonus Playlist");
+		bonus.addSong(new Song("Perfect", 4.21));
+		bonus.addSong(new Song("How long", 3.30));
+		bonus.addSongAtIndex(new Song("End Game", 4.11), 0);
+		bonus.addSongAtIndex(new Song("Anywhere", 3.35), 2);
+		bonus.showPlaylist();
+		
+		System.out.println("\nRearrange songs ---------------------");
+		bonus.moveUp(1);
+		bonus.moveDown(2);
+		bonus.showPlaylist();
 //	
 	}
 }

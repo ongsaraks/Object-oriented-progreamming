@@ -76,11 +76,6 @@ public class Playlist {
     	}
     	return sum;
     }
-
-//    public ArrayList<Song> getTooLongSongs(double minute) {
-//
-//    }
-
 	public void showPlaylist() {
 		System.out.println(playlistName);
 		int j = 0;
@@ -90,6 +85,23 @@ public class Playlist {
 		
 		}
 		}
+	void moveUp(int position) {
+		if(position >= 0 && position <= songs.size()) {
+			songs.add(position + 1, songs.get(position-1));
+			songs.set(position-1,songs.get(position));
+			songs.remove(position);			
+
+		}
+		
+	}
+	void moveDown(int position) {
+		if(position >= 0 && position <= songs.size()) {
+			songs.add(position+2,songs.get(position));
+			songs.remove(position);
+			
+
+		}
+	}
 		
 		
 				
