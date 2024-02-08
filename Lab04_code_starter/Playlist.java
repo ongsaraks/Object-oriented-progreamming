@@ -22,6 +22,7 @@ public class Playlist {
 	boolean addSongAtIndex(Song song, int index) {
 		if(index < 0 || index > songs.size()) {
 			System.out.println("Invalid index");
+			return false;
 		}
 		if (!songs.contains(song)){
 			songs.add(index,song);
