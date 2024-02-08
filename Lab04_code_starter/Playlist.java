@@ -76,6 +76,15 @@ public class Playlist {
     	}
     	return sum;
     }
+    ArrayList<Song> getTooLongsongList (double minute){
+		ArrayList<Song> songListong = new ArrayList<Song>();
+		for(int i = 0;i < songs.size();i++) {
+			if(songs.get(i).getDuration() > minute) {
+				songListong.add(this.songs.get(i));
+			}
+		}
+		return songListong;
+	}
 	public void showPlaylist() {
 		System.out.println(playlistName);
 		int j = 0;
