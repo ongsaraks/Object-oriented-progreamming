@@ -12,6 +12,8 @@ public class Score {
 	//The constructor should set all given attributes to 0.
 	public Score() {
 		//TODO: Code HERE
+		this.jumpScore = 0;
+		this.styleScore = new double[0];
 	}
 	
 	//This method set the jumpScore to the given score
