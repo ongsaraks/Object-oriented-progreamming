@@ -46,10 +46,23 @@ public class Score {
     * n is the length of the score list. 
     */
 	public double getCalibratedAverage() {
-		
 		//TODO: Code HERE
+		double min = styleScore[0];
+		double max = styleScore[0];
+		double sum = 0;
+		for(int i = 0; i < styleScore.length; i++) {
+			if (min < styleScore[i]) {
+				min = styleScore[i];
+			}
+			if (max > styleScore[i]) {
+				max = styleScore[i];
+			}
+			sum += styleScore[i];
+		}
+		double avg = (sum -min - max) / (styleScore.length - 2);
 		
-		return 0.0; 
+		
+		return avg; 
 	}
 	
 	//This main is for testing your output
