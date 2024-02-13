@@ -13,29 +13,30 @@ public class Score {
 	public Score() {
 		//TODO: Code HERE
 		this.jumpScore = 0;
-		this.styleScore = new double[0];
+		this.styleScore = new double[6];
 	}
 	
 	//This method set the jumpScore to the given score
 	public void setScores(double score) {
-		//TODO: Code HERE
+		this.jumpScore = score;
 	}
 	
 	//This method set the styleScore to the given score
 	public void setScores(double[] scores) {
 		//TODO: Code HERE
+		this.styleScore = scores;
 	}
 	
 	//This method return the jumpScore
 	public double getJumpScores() {
 		//TODO: Code HERE
-		return 0.0;
+		return this.jumpScore;
 	}
 	
 	//This method return the styleScore
 	public double[] getStyleScore() {
 		//TODO: Code HERE
-		return new double[] {};
+		return styleScore;
 	}
 	
    /*
