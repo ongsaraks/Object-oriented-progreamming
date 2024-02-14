@@ -15,7 +15,7 @@ import java.util.*;
 public class Competitor {
 	
 	private String fname, lname, nationality;
-	private int age;
+	private int age; 
 	private List<Score> score;
 	private double w1, w2;
 	private final int maxKpoint = 50;
@@ -31,12 +31,24 @@ public class Competitor {
 	public void setProfile(String fname, String lname, String nationality, int age)
 	{
 		//TODO: Code HERE
+		this.fname = fname;
+		this.lname = lname;
+		this.nationality = nationality;
+		this.age = age;
 	}
 	
 	// Add jScore and sScore to the list of score
 	// The first score will represent the round1 score for the competitor
 	public void setScore(double jScore, double[] sScore) {
 		//TODO: Code HERE
+		Score assign = new Score();
+		assign.setScores(jScore);
+		assign.setScores(sScore);
+		score.add(assign);
+		
+		
+		
+		
 	}
 	
 	public void showProfile() {
@@ -48,6 +60,16 @@ public class Competitor {
 	// The format is present in Lab06 sheet
 	public void showRawScore(int round) {
 		//TODO: Code HERE
+//		System.out.println(score.get(round-1).getJumpScores()); //same same
+		Score jscore = score.get(round - 1);
+		Score styScore = score.get(round-1);
+		System.out.println(jscore.getJumpScores());
+		System.out.print("Ariel Style (Raw) score:");
+		for(double i : styScore.getStyleScore()) {
+			System.out.print("|"+i+"|");
+		}
+		
+		
 	}
 	
 	
