@@ -33,24 +33,29 @@ public class SkiCompetition {
     */
 	public List<Competitor> getGoldMedal(List<Competitor> competitors, int round){
 		//TODO: Code HERE
-		Competitor min = competitors.get(0);
-		Competitor max = competitors.get(0);
-		for(int i = 0; i < competitors.size(); i++) {
-			if(competitors.get(0).getFinalScore(round-1) < competitors.get(i).getFinalScore(round-1) ) {
-				min = competitors.get(i);
-			}
-			if(competitors.get(0).getFinalScore(round-1) > competitors.get(i).getFinalScore(round)-1);{
-				max = competitors.get(i);			
-			}
-			competitors.set(0,max);
-			competitors.set(competitors.size()-1,min);
-			if(competitors.get(1).getFinalScore(round-1)> competitors.get(2).getFinalScore(round-1)) {
-				competitors.remove(2);
-			}
-			else {
-				competitors.remove(1);
-			}
-		}
+	//		Competitor min = competitors.get(0);
+	//		Competitor max = competitors.get(0);
+	//		for(int i = 0; i < competitors.size(); i++) {
+	//			if(competitors.get(i).getFinalScore(round) < 8.0) {
+	//				competitors.remove(i);
+	//			}
+	//			if(competitors.get(0).getFinalScore(round) < competitors.get(i).getFinalScore(round) ) {
+	//				min = competitors.get(i);
+	//			}
+	//			if(competitors.get(0).getFinalScore(round) > competitors.get(i).getFinalScore(round));{
+	//				max = competitors.get(i);			
+	//			}
+	//			
+	//		}
+	//		competitors.set(0,max);
+	//		competitors.set(competitors.size()-1,min);
+//		if(competitors.get(1).getFinalScore(round)> competitors.get(2).getFinalScore(round)) {
+//			competitors.remove(2);
+//		}
+//		else {
+//			competitors.remove(1);
+//		}
+	
         return new ArrayList<>();
 	}
 	
