@@ -61,11 +61,10 @@ public class Competitor {
 	public void showRawScore(int round) {
 		//TODO: Code HERE
 //		System.out.println(score.get(round-1).getJumpScores()); //same same
-		Score jscore = score.get(round - 1);
-		Score styScore = score.get(round-1);
-		System.out.println(jscore.getJumpScores());
+//		Score styScore = score.get(round - 1);
+		System.out.println("Jumping score: " + getJScore(round-1));
 		System.out.print("Ariel Style (Raw) score:");
-		for(double i : styScore.getStyleScore()) {
+		for(double i : score.get(round-1).getStyleScore()) {
 			System.out.print("|"+i+"|");
 		}
 		
@@ -79,7 +78,9 @@ public class Competitor {
     */
 	public double getJScore(int round) {
 		//TODO: Code HERE
-		return 0.0;
+		double dvjscore;
+		dvjscore = (score.get(round).getJumpScores() / maxKpoint)*10;
+		return dvjscore;
 	}
 	
    /*
@@ -90,9 +91,12 @@ public class Competitor {
     */
 	public double getFinalScore(int round) {
 		//TODO: Code HERE
-		return 0.0;
+		double jScore = (getJScore(round-1)*w1);
+		double sScore = (score.get(round-1).getCalibratedAverage()*w2);
+		double FScore = jScore + sScore;
+		return FScore;
 	}
-	
+	//4.5 + 
 	//This main is for testing your output
 	public static void main(String[] args) {
 		Competitor c1 = new Competitor(0.5, 0.5);
