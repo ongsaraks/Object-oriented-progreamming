@@ -2,8 +2,7 @@
 * This class stores scores and provide calibrated average about the scores from 6 judges. 
 * This class will be used as a part of the Competitor class. 
 */
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Score {
 	private double jumpScore;
