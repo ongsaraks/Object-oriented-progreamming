@@ -91,6 +91,7 @@ public class Competitor {
     */
 	public double getFinalScore(int round) {
 		//TODO: Code HERE
+//		double jScore = ((score.get(round-1).getJumpScores() / maxKpoint)*10)*w1;
 		double jScore = (getJScore(round-1)*w1);
 		double sScore = (score.get(round-1).getCalibratedAverage()*w2);
 		double FScore = jScore + sScore;
