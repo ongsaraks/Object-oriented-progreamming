@@ -1,7 +1,19 @@
 /*
 * This class stores scores and provide calibrated average about the scores from 6 judges. 
+
 * This class will be used as a part of the Competitor class. 
 */
+// File: <SkiCompetition>
+// Description: <Implememt score for other class use>
+// Assignment Number: <5>
+//
+// ID: <6688093>
+// Name: Ongsa Raksalam
+// Section: 2
+// Grader: Sorn
+//
+// On my honor, Ongsa Raksalam, this lab assignment is my own work
+// and I have not provided this code to any other students.
 import java.util.*;
 
 public class Score {
@@ -50,10 +62,10 @@ public class Score {
 		double max = styleScore[0];
 		double sum = 0;
 		for(int i = 0; i < styleScore.length; i++) {
-			if (min < styleScore[i]) {
+			if (styleScore[i] < min) {
 				min = styleScore[i];
 			}
-			if (max > styleScore[i]) {
+			if (styleScore[i] >max) {
 				max = styleScore[i];
 			}
 			sum += styleScore[i];
