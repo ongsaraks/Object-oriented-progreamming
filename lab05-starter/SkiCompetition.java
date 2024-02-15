@@ -33,30 +33,39 @@ public class SkiCompetition {
     */
 	public List<Competitor> getGoldMedal(List<Competitor> competitors, int round){
 		//TODO: Code HERE
-	//		Competitor min = competitors.get(0);
-	//		Competitor max = competitors.get(0);
-	//		for(int i = 0; i < competitors.size(); i++) {
-	//			if(competitors.get(i).getFinalScore(round) < 8.0) {
-	//				competitors.remove(i);
-	//			}
-	//			if(competitors.get(0).getFinalScore(round) < competitors.get(i).getFinalScore(round) ) {
-	//				min = competitors.get(i);
-	//			}
-	//			if(competitors.get(0).getFinalScore(round) > competitors.get(i).getFinalScore(round));{
-	//				max = competitors.get(i);			
-	//			}
-	//			
-	//		}
-	//		competitors.set(0,max);
-	//		competitors.set(competitors.size()-1,min);
+		List<Competitor> sumMedal = new ArrayList<Competitor>();
+		for(int i = 0; i < competitors.size(); i++) {
+			if(competitors.get(i).getFinalScore(round) >= 8.0) {
+				sumMedal.add(competitors.get(i));
+			}
+		}
+		if(sumMedal.size() > 3) {
+			Competitor max = sumMedal.get(0);
+			Competitor min = sumMedal.get(0);
+			for(int i = 0; i < sumMedal.size(); i++) {
+			if(sumMedal.get(i).getFinalScore(round) < min.getFinalScore(round)) {
+				min = sumMedal.get(i);
+			}
+			if( sumMedal.get(i).getFinalScore(round) > max.getFinalScore(round)) {
+				max = sumMedal.get(i);
+			}
+			}
+			sumMedal.remove(min);
+	
+		}
+//		System.out.println(sumMedal.size());
+//		System.out.println(sumMedal);
+//		sumMedal.remove();
+//			
+//			competitors.set(0,max);
+//			competitors.set(competitors.size()-1,min);
 //		if(competitors.get(1).getFinalScore(round)> competitors.get(2).getFinalScore(round)) {
 //			competitors.remove(2);
 //		}
 //		else {
 //			competitors.remove(1);
 //		}
-	
-        return new ArrayList<>();
+        return sumMedal;
 	}
 	
     public void addCompetitor(Competitor c) {

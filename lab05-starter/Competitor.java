@@ -45,10 +45,7 @@ public class Competitor {
 		assign.setScores(jScore);
 		assign.setScores(sScore);
 		score.add(assign);
-		
-		
-		
-		
+			
 	}
 	
 	public void showProfile() {
