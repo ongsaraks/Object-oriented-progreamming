@@ -33,7 +33,7 @@ public class SkiCompetition {
     */
 	public List<Competitor> getGoldMedal(List<Competitor> competitors, int round){
 		//TODO: Code HERE
-		List<Competitor> sumMedal = new ArrayList<Competitor>();
+		ArrayList<Competitor> sumMedal = new ArrayList<Competitor>();
 		for(int i = 0; i < competitors.size(); i++) {
 			if(competitors.get(i).getFinalScore(round) >= 8.0) {
 				sumMedal.add(competitors.get(i));
@@ -53,18 +53,6 @@ public class SkiCompetition {
 			sumMedal.remove(min);
 	
 		}
-//		System.out.println(sumMedal.size());
-//		System.out.println(sumMedal);
-//		sumMedal.remove();
-//			
-//			competitors.set(0,max);
-//			competitors.set(competitors.size()-1,min);
-//		if(competitors.get(1).getFinalScore(round)> competitors.get(2).getFinalScore(round)) {
-//			competitors.remove(2);
-//		}
-//		else {
-//			competitors.remove(1);
-//		}
         return sumMedal;
 	}
 	
