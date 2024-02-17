@@ -25,7 +25,7 @@ public class ShoppingCart {
 	public void addProduct(Product product) {
 		// YOUR CODE HERE
 		
-		if(((AgeRestrictedProduct) product).isEligible(customerAge)) {
+		if() {
 			products.add(product);
 		}
 		else {
