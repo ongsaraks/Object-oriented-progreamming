@@ -24,8 +24,14 @@ public class ShoppingCart {
 	// TODO 5: add product
 	public void addProduct(Product product) {
 		// YOUR CODE HERE
-		//
-		//
+		
+		if(((AgeRestrictedProduct) product).isEligible(customerAge)) {
+			products.add(product);
+		}
+		else {
+			System.out.println("You are not eligible to purchase " + product.getName());
+		}
+		
 	}
 	
 	// TODO 6: calculate total price

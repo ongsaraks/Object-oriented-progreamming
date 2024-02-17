@@ -18,24 +18,18 @@ public class AgeRestrictedProduct extends Product{
 	// TODO 2: setter and getter
 	public void setMinimumAge(int age) {
 		// YOUR CODE HERE
-		//
-		//
 		this.minimumAge = age;
 	}
 	
 	public int getMinimumAge() {
 		// YOUR CODE HERE
-		//
-		//
 		return this.minimumAge;
 	}
 	
 	// TODO 3: check eligibility 
 	public boolean isEligible(int age) {
 		// YOUR CODE HERE
-		//
-		//
-		if(age > 21) {
+		if(age >= 21) {
 			return true;
 		}
 		return false;
@@ -46,9 +40,7 @@ public class AgeRestrictedProduct extends Product{
 	@Override
 	public String toString() {
 		// YOUR CODE HERE
-		//
-		//
-		
+
 		return super.toString() + " Minimum Age: " + minimumAge;
 	}
 }
