@@ -4,14 +4,14 @@
  *
  */
 
-public class AgeRestrictedProduct {
+public class AgeRestrictedProduct extends Product{
 	private int minimumAge;
 
 	// TODO 1: constructor
 	public AgeRestrictedProduct(String name, double price, int minAge) {
 		// YOUR CODE HERE
-		//
-		//
+		super(name,price);
+		this.minimumAge = minAge;
 		System.out.println("Age-restricted product is created ...");
 	}
 	
@@ -20,12 +20,14 @@ public class AgeRestrictedProduct {
 		// YOUR CODE HERE
 		//
 		//
+		this.minimumAge = age;
 	}
 	
 	public int getMinimumAge() {
 		// YOUR CODE HERE
 		//
 		//
+		return this.minimumAge;
 	}
 	
 	// TODO 3: check eligibility 
@@ -33,7 +35,11 @@ public class AgeRestrictedProduct {
 		// YOUR CODE HERE
 		//
 		//
+		if(age > 21) {
+			return true;
+		}
 		return false;
+		
 	}
 	
 	// TODO 4: toString method
