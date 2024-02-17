@@ -48,6 +48,7 @@ public class AgeRestrictedProduct extends Product{
 		// YOUR CODE HERE
 		//
 		//
-		return null;
+		
+		return super.toString() + " Minimum Age: " + minimumAge;
 	}
 }
