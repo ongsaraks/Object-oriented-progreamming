@@ -24,22 +24,32 @@ public class ShoppingCart {
 	// TODO 5: add product
 	public void addProduct(Product product) {
 		// YOUR CODE HERE
-		
-		if() {
+		if(product instanceof AgeRestrictedProduct) {
+			AgeRestrictedProduct check = (AgeRestrictedProduct) product;
+			if(check.isEligible(customerAge)) {
 			products.add(product);
+			System.out.println(product.getName() +" added to cart");
 		}
 		else {
 			System.out.println("You are not eligible to purchase " + product.getName());
 		}
 		
+		}
+		else {
+			products.add(product);
+			System.out.println(product.getName() + " added to cart");
+		}
+
 	}
 	
 	// TODO 6: calculate total price
 	public double calculateTotalPrice() {
 		// YOUR CODE HERE
-		//
-		//
-		return 0.0;
+		float sum = 0; 
+		for(Product i : products) {
+			sum += i.getPrice();
+		}
+		return sum;
 	}
 
 	public void clear() {
