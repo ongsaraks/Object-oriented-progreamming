@@ -5,11 +5,14 @@ public class ShoppingCart {
 	
 	private ArrayList<Product> products;
 	private int customerAge;
+//	private char member;
 	
 	
+//	public ShoppingCart(int customerAge , char member) {
 	public ShoppingCart(int customerAge) {
 		this.products = new ArrayList<Product>();
 		this.customerAge = customerAge;
+//		this.member = member;
 		System.out.println("Shopping Cart is created ... ");
 	}
 	
@@ -49,6 +52,14 @@ public class ShoppingCart {
 		for(Product i : products) {
 			sum += i.getPrice();
 		}
+//		#Draft
+//		if(ShoppingCart.) {   
+//			return (sum * 10)/100;
+//		}
+//		else {
+//			return sum;
+//		}    				
+//		#Draft
 		return sum;
 	}
 
@@ -65,7 +76,8 @@ public class ShoppingCart {
 		AgeRestrictedProduct wine = new AgeRestrictedProduct("Wine", 999, 21);
 		System.out.println("------------------------------------------\n");
 		
-		ShoppingCart cart = new ShoppingCart(20);
+		ShoppingCart cart = new ShoppingCart(20,'S');
+		ShoppingCart cart2 = new ShoppingCart(20,'N');
 		cart.addProduct(candy);
 		cart.addProduct(wine);
 		
