@@ -1,3 +1,14 @@
+// File: <ShoppingCart>
+// Description: <Add product to shoppingCart>
+// Assignment Number: <Lab 6>
+//
+// ID: <6688093>
+// Name: Ongsa Raksalam
+// Section: 2
+// Grader: 
+//
+// On my honor, Ongsa Raksalam, this lab assignment is my own work
+// and I have not provided this code to any other students.
 
 import java.util.ArrayList;
 

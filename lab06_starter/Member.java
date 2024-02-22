@@ -1,4 +1,14 @@
-
+// File: <Member>
+// Description: <inheretance class from Product>
+// Assignment Number: <Lab 6 challenge>
+//
+// ID: <6688093>
+// Name: Ongsa Raksalam
+// Section: 2
+// Grader: 
+//
+// On my honor, Ongsa Raksalam, this lab assignment is my own work
+// and I have not provided this code to any other students.
 public class Member extends Product{
 	private char MemberLevel;
 	public Member(String name,double price,char MemberLevel) {

@@ -3,7 +3,17 @@
  * Modify this class to inherit from Product class
  *
  */
-
+// File: <AgeRestrictedProduct>
+// Description: <Restricted Age for some product>
+// Assignment Number: <Lab 6>
+//
+// ID: <6688093>
+// Name: Ongsa Raksalam
+// Section: 2
+// Grader: 
+//
+// On my honor, Ongsa Raksalam, this lab assignment is my own work
+// and I have not provided this code to any other students.
 public class AgeRestrictedProduct extends Product{
 	private int minimumAge;
 
