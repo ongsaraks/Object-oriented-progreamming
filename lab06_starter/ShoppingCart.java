@@ -55,27 +55,27 @@ public class ShoppingCart {
 		}
 		
 		}
-//		else if(product instanceof MemberRestrictProduct) { // challenge
-//			MemberRestrictProduct checkM = (MemberRestrictProduct) product;
-//			if(checkM.isMember(checkM.getMember())) {
-//				products.add(product);
-//				System.out.println(product.getName() +" added to cart");
-//			}
-//			else {
-//				System.out.println("Only member are allowed");
-//			}
-//			
-//		} // challenge
-//		else if(product instanceof LegalProduct) {
-//			LegalProduct checkL = (LegalProduct)product;
-//			if(checkL.isLegal(checkL.getLegal())) {
-//				products.add(product);
-//				System.out.println(product.getName() +" added to cart");
-//			}
-//			else {
-//				System.out.println(product.getName()  + " It's eligal Call the police!!!!!!!!");
-//			}
-//		} // challenge
+		else if(product instanceof MemberRestrictProduct) { // challenge
+			MemberRestrictProduct checkM = (MemberRestrictProduct) product;
+			if(checkM.isMember(checkM.getMember())) {
+				products.add(product);
+				System.out.println(product.getName() +" added to cart");
+			}
+			else {
+				System.out.println("Only member are allowed");
+			}
+			
+		} // challenge
+		else if(product instanceof LegalProduct) {
+			LegalProduct checkL = (LegalProduct)product;
+			if(checkL.isLegal(checkL.getLegal())) {
+				products.add(product);
+				System.out.println(product.getName() +" added to cart");
+			}
+			else {
+				System.out.println(product.getName()  + " It's eligal Call the police!!!!!!!!");
+			}
+		} // challenge
 		else {
 			products.add(product);
 			System.out.println(product.getName() + " added to cart");
@@ -112,19 +112,19 @@ public class ShoppingCart {
 		System.out.println("Creating Products");
 		Product candy = new Product("Candy", 25.00);
 		AgeRestrictedProduct wine = new AgeRestrictedProduct("Wine", 999, 21);
-//		MemberRestrictProduct Exclusive = new MemberRestrictProduct("Chocolate",20,'N');
-//		Legal Yaba = new Legal("Yaba",3,"No");
-//		Legal Medicine = new Legal("Para",15,"Yes");
-//		Legal Guncha = new Legal("Guncha",15,"No");
+		MemberRestrictProduct Exclusive = new MemberRestrictProduct("Chocolate",20,'N');
+		LegalProduct Yaba = new LegalProduct("Yaba",3,"No");
+		LegalProduct Medicine = new LegalProduct("Para",15,"Yes");
+		LegalProduct Guncha = new LegalProduct("Guncha",15,"No");
 		System.out.println("------------------------------------------\n");
 		
 		ShoppingCart cart = new ShoppingCart(20,'N',"Not specific");
 		cart.addProduct(candy);
 		cart.addProduct(wine);
-//		cart.addProduct(Exclusive); //challenge
-//		cart.addProduct(Medicine); // challenge
-//		cart.addProduct(Yaba); //challenge
-//		cart.addProduct(Guncha); //challenge
+		cart.addProduct(Exclusive); //challenge
+		cart.addProduct(Medicine); // challenge
+		cart.addProduct(Yaba); //challenge
+		cart.addProduct(Guncha); //challenge
 		System.out.println("\nChecking out (Age:" + cart.getCustomerAge()+ ")");
 		System.out.println("Total price: " + cart.calculateTotalPrice());
 		System.out.println("------------------------------------------\n");
@@ -132,12 +132,12 @@ public class ShoppingCart {
 		
 		cart.clear();				// clear shopping cart (remove all products in the cart)
 		cart.setCustomerAge(35);	// change the customer age to 35 years old
-//		cart.setMember('M');  //challenge
+		cart.setMember('M');  //challenge
 		cart.addProduct(candy);
 		cart.addProduct(wine);
-//		cart.addProduct(Exclusive); //challenge
-//		cart.addProduct(Medicine); // challenge
-//		cart.addProduct(Yaba); //challenge
+		cart.addProduct(Exclusive); //challenge
+		cart.addProduct(Medicine); // challenge
+		cart.addProduct(Yaba); //challenge
 		
 		System.out.println("\nChecking out (Age:" + cart.getCustomerAge() + ")");
 		System.out.println("Total price: " + cart.calculateTotalPrice());
