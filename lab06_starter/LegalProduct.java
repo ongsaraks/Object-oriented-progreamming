@@ -9,9 +9,9 @@
 //
 // On my honor, Ongsa Raksalam, this lab assignment is my own work
 // and I have not provided this code to any other students.
-public class Legal extends Product{
+public class LegalProduct extends Product{
 	String legal;
-	public Legal(String name, double price, String Legal){
+	public LegalProduct(String name, double price, String Legal){
 		super(name,price);
 		this.legal = Legal;
 		System.out.println("Legal product is created ...");

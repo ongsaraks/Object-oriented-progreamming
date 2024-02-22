@@ -55,27 +55,27 @@ public class ShoppingCart {
 		}
 		
 		}
-		else if(product instanceof MemberRestrictProduct) { // challenge
-			MemberRestrictProduct checkM = (MemberRestrictProduct) product;
-			if(checkM.isMember(checkM.getMember())) {
-				products.add(product);
-				System.out.println(product.getName() +" added to cart");
-			}
-			else {
-				System.out.println("Only member are allowed");
-			}
-			
-		} // challenge
-		else if(product instanceof Legal) {
-			Legal checkL = (Legal)product;
-			if(checkL.isLegal(checkL.getLegal())) {
-				products.add(product);
-				System.out.println(product.getName() +" added to cart");
-			}
-			else {
-				System.out.println(product.getName()  + " It's eligal Call the police!!!!!!!!");
-			}
-		}
+//		else if(product instanceof MemberRestrictProduct) { // challenge
+//			MemberRestrictProduct checkM = (MemberRestrictProduct) product;
+//			if(checkM.isMember(checkM.getMember())) {
+//				products.add(product);
+//				System.out.println(product.getName() +" added to cart");
+//			}
+//			else {
+//				System.out.println("Only member are allowed");
+//			}
+//			
+//		} // challenge
+//		else if(product instanceof LegalProduct) {
+//			LegalProduct checkL = (LegalProduct)product;
+//			if(checkL.isLegal(checkL.getLegal())) {
+//				products.add(product);
+//				System.out.println(product.getName() +" added to cart");
+//			}
+//			else {
+//				System.out.println(product.getName()  + " It's eligal Call the police!!!!!!!!");
+//			}
+//		} // challenge
 		else {
 			products.add(product);
 			System.out.println(product.getName() + " added to cart");
@@ -112,7 +112,7 @@ public class ShoppingCart {
 		System.out.println("Creating Products");
 		Product candy = new Product("Candy", 25.00);
 		AgeRestrictedProduct wine = new AgeRestrictedProduct("Wine", 999, 21);
-//		Member Exclusive = new Member("Chocolate",20,'N');
+//		MemberRestrictProduct Exclusive = new MemberRestrictProduct("Chocolate",20,'N');
 //		Legal Yaba = new Legal("Yaba",3,"No");
 //		Legal Medicine = new Legal("Para",15,"Yes");
 //		Legal Guncha = new Legal("Guncha",15,"No");

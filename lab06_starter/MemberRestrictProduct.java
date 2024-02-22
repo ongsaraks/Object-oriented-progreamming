@@ -10,17 +10,17 @@
 // On my honor, Ongsa Raksalam, this lab assignment is my own work
 // and I have not provided this code to any other students.
 public class MemberRestrictProduct extends Product {
-	private char MemberLevel;
-	public MemberRestrictProduct(String name,double price,char MemberLevel) {
+	private char haveM;
+	public MemberRestrictProduct(String name,double price,char haveM) {
 		super(name,price);
-		this.MemberLevel = MemberLevel;
-		System.out.println("MemberLevel is created...");
+		this.haveM = haveM;
+		System.out.println("haveM is created...");
 	}
 	public void setMember(char M) {
-		this.MemberLevel = M;
+		this.haveM = M;
 	}
 	public char getMember() {
-		return this.MemberLevel;
+		return this.haveM;
 	}
 	public boolean isMember(char M) {
 		if(M == 'M'){
@@ -31,7 +31,7 @@ public class MemberRestrictProduct extends Product {
 		}
 	}
 	public String toString() {
-		return super.toString() + this.MemberLevel;
+		return super.toString() + this.haveM;
 	}
 	
 	 
