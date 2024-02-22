@@ -9,9 +9,9 @@
 //
 // On my honor, Ongsa Raksalam, this lab assignment is my own work
 // and I have not provided this code to any other students.
-public class Member extends Product{
+public class MemberRestrictProduct extends Product {
 	private char MemberLevel;
-	public Member(String name,double price,char MemberLevel) {
+	public MemberRestrictProduct(String name,double price,char MemberLevel) {
 		super(name,price);
 		this.MemberLevel = MemberLevel;
 		System.out.println("MemberLevel is created...");

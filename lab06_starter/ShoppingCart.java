@@ -55,8 +55,8 @@ public class ShoppingCart {
 		}
 		
 		}
-		else if(product instanceof Member) { // challenge
-			Member checkM = (Member) product;
+		else if(product instanceof MemberRestrictProduct) { // challenge
+			MemberRestrictProduct checkM = (MemberRestrictProduct) product;
 			if(checkM.isMember(checkM.getMember())) {
 				products.add(product);
 				System.out.println(product.getName() +" added to cart");
