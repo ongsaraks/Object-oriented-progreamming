@@ -13,7 +13,7 @@ public class Member extends Product{
 		return this.MemberLevel;
 	}
 	public boolean isMember(char M) {
-		if(M == 'X'){
+		if(M == 'M'){
 			return true;
 		}
 		else {

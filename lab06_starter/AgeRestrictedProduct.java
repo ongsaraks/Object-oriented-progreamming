@@ -29,7 +29,7 @@ public class AgeRestrictedProduct extends Product{
 	// TODO 3: check eligibility 
 	public boolean isEligible(int age) {
 		// YOUR CODE HERE
-		if(age >= 21) {
+		if(age >= this.minimumAge) {
 			return true;
 		}
 		return false;
