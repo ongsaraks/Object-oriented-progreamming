@@ -10,7 +10,7 @@
 // ID: <6688093>
 // Name: Ongsa Raksalam
 // Section: 2
-// Grader: 
+// Grader: ICE
 //
 // On my honor, Ongsa Raksalam, this lab assignment is my own work
 // and I have not provided this code to any other students.
