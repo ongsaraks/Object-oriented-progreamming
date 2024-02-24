@@ -3,11 +3,11 @@
  */
 
 // TODO 1: Make this class extend from Shape class
-public class Rectangle {
+public class Rectangle  extends Shape{
 	
 	// TODO 2: Create any private instance variables of Rectangle class 
 	// CODE HERE
-
+	
 	// TODO 3: Create a constructor method taking no input parameter
 	// then, assign default value to each instance variable as follows
 	// color: "no color"
