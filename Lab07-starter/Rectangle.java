@@ -3,11 +3,13 @@
  */
 
 // TODO 1: Make this class extend from Shape class
-public class Rectangle  extends Shape{
-	
+public class Rectangle extends Shape{
+		
 	// TODO 2: Create any private instance variables of Rectangle class 
 	// CODE HERE
-	
+	private double length;
+	private double width;
+	private String color = "";
 	// TODO 3: Create a constructor method taking no input parameter
 	// then, assign default value to each instance variable as follows
 	// color: "no color"
@@ -15,12 +17,18 @@ public class Rectangle  extends Shape{
 	// width: 0
 	public Rectangle() {
 		// CODE HERE
+		this.length = 0;
+		this.width = 0;
+		this.color = "no color";
 	}
 
 	// TODO 4: Overload a constructor method taking three input parameters
 	// then assign the value to each instance variable accordingly
 	public Rectangle(String color, double length, double width) {
 		// CODE HERE
+		super(color);
+		this.length = length;
+		this.width = width;
 	}
 
 	
@@ -28,7 +36,8 @@ public class Rectangle  extends Shape{
 	@Override
 	public double getArea() {
 		// CODE HERE
-		return 0.0;
+		
+		return width * length;
 	}
 
 	// TODO 6: Overload the getArea() method taking two input parameters
@@ -36,7 +45,7 @@ public class Rectangle  extends Shape{
 	// finally, calculate and return the area
 	public double getArea(double length, double width) {
 		// CODE HERE
-		return 0.0;
+		return width * length;
 	}
 	
 	// TODO 7: Override the inherited toString() method to display rectangle information in the following format
@@ -44,7 +53,7 @@ public class Rectangle  extends Shape{
 	@Override
 	public String toString() {
 		// CODE HERE
-		return "";
+		return "Rectangle "+ "[length="+ this.length + ", width="+this.width+", Shape[color="+ super.getColor()+"]]" ;
 	}
 
 }
