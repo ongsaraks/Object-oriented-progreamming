@@ -25,12 +25,13 @@ public class Triangle extends Shape{
 	@Override
 	public double getArea() {
 		// CODE HERE
-		
 		return 0.5*base * height;
 	}
 
 	public double getArea(double base, double height) {
 		// CODE HERE
+		this.base = base;
+		this.height = height;
 		return 0.5*base * height;
 	}
 	

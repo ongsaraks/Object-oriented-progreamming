@@ -17,8 +17,8 @@ public class Rectangle extends Shape{
 	// width: 0
 	public Rectangle() {
 		// CODE HERE
-		this.length = 0;
-		this.width = 0;
+		this.length = 0.0;
+		this.width = 0.0;
 		this.color = "no color";
 	}
 
@@ -36,8 +36,8 @@ public class Rectangle extends Shape{
 	@Override
 	public double getArea() {
 		// CODE HERE
-		
-		return width * length;
+		double area = width * length; 
+		return area;
 	}
 
 	// TODO 6: Overload the getArea() method taking two input parameters
@@ -45,7 +45,11 @@ public class Rectangle extends Shape{
 	// finally, calculate and return the area
 	public double getArea(double length, double width) {
 		// CODE HERE
-		return width * length;
+		double area = width * length; 
+		this.width = width;
+		this.length = length;
+		return area;
+		
 	}
 	
 	// TODO 7: Override the inherited toString() method to display rectangle information in the following format
