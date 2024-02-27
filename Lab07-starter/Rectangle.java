@@ -9,7 +9,6 @@ public class Rectangle extends Shape{
 	// CODE HERE
 	private double length;
 	private double width;
-	private String color = "";
 	// TODO 3: Create a constructor method taking no input parameter
 	// then, assign default value to each instance variable as follows
 	// color: "no color"
@@ -19,7 +18,6 @@ public class Rectangle extends Shape{
 		// CODE HERE
 		this.length = 0.0;
 		this.width = 0.0;
-		this.color = "no color";
 	}
 
 	// TODO 4: Overload a constructor method taking three input parameters

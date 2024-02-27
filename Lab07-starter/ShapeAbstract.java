@@ -13,5 +13,5 @@ abstract class ShapeAbstract {
 	public String toString() {
 		return "Shape[color=" + color + "]";
 	}
-	abstract double gerArea();
+	abstract double getArea();
 }

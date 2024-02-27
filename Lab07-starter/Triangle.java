@@ -4,12 +4,10 @@ public class Triangle extends Shape{
 	//TODO 8: Complete the Triangle class
 	private double base;
 	private double height;
-	private String color = "";
 	public Triangle() {
 		// CODE HERE
 		this.base = 0;
 		this.height = 0;
-		this.color = "no color";
 	}
 
 
