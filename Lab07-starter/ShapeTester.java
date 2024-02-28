@@ -40,5 +40,6 @@ public class ShapeTester {
 		System.out.println("Area is " + s7.getArea());
 		System.out.println(s7);
 		
+		
 	}
 }
