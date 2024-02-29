@@ -1,3 +1,15 @@
+// File: <Rectangle>
+// Description: <Create Rectangle shape>
+// Assignment Number: <Lab 7>
+//
+// ID: <6688093>
+// Name: Ongsa Raksalam
+// Section: 2
+// Grader: Sorn
+//
+// On my honor, Ongsa Raksalam, this lab assignment is my own work
+// and I have not provided this code to any other students.
+
 /*
  * The Rectangle class, subclass of Shape
  */
