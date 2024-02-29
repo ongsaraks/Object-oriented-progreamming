@@ -85,20 +85,36 @@ public class Playlist {
 	// TODO: count number of Song in the playlist
 	public int getNumSongs() {
 		// YOUR CODE HERE
-		return -1;
+		int countS = 0;
+		for(Audio a: list) {
+			if(a instanceof Song) {
+				countS++;
+			}
+		
+		}
+		return countS;
 		// ------------------------------------
 	}
 	
 	// TODO: count number of Podcast in the playlist
 	public int getNumPodcasts() {
 		// YOUR CODE HERE
-		return -1;
+		int countP = 0;
+		for(Audio a: list) {
+			if(a instanceof Podcast) {
+				countP++;
+			}
+		
+		}
+		return countP;
 		// ------------------------------------
 	}
 	
 	// TODO: increase duration of the audio at a particular index by the given number in second
 	public void increaseDuration(int i, int sec) {
 		// YOUR CODE HERE
+		list.get(i).setDuration(list.get(i).getDurationSec() + sec);
+		
 	}
 	
 	

@@ -14,8 +14,8 @@ class Square extends ShapeAbstract{
 	}
 	public double getArea(double side1, double side2) {
 		// TODO Auto-generated method stub
-		this.side1 = side1;
-		this.side2 = side2;
+//		this.side1 = side1;
+//		this.side2 = side2;
 		return this.side1 * this.side2;
 	}
 	public String toString() {

@@ -18,13 +18,15 @@
 // and I have not provided this code to any other students.
 
 
-public class Song {
+public class Song extends Audio{
 	
 	private String title;		// song's title	
 	private double duration;	// song's duration in minute e.g., 3.14 = 3 minutes and 14 seconds
 	private String album;		// song's album
 	
 	public Song(String t, double d, String a) {
+
+		super(t,d);
 		this.title = t;
 		this.duration = d;
 		this.album = a;
@@ -32,25 +34,25 @@ public class Song {
 	
 	// getTitle() to get song's title
 	public String getTitle() {
-		System.out.println("INSDIE SONG CLASS");
+//		System.out.println("INSDIE SONG CLASS");
 		return this.title;
 	}
 	
 	// getDuration() to get song's duration
 	public double getDuration() {
-		System.out.println("INSDIE SONG CLASS");
+//		System.out.println("INSDIE SONG CLASS");
 		return this.duration;
 	}
 	
 	// getDuration() to get song's duration
 	public String getAlbum() {
-		System.out.println("INSDIE SONG CLASS");
+//		System.out.println("INSDIE SONG CLASS");
 		return this.album;
 	}
 	
 	// getDuration in second
 	public int getDurationSec() {
-		System.out.println("INSDIE SONG CLASS");
+//		System.out.println("INSDIE SONG CLASS");
 		return (int) (((int) duration * 60) + ((duration * 100) % 100));
 	}
 
