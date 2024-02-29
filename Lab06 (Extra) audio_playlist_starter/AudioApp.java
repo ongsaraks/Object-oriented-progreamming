@@ -66,18 +66,18 @@ public class AudioApp {
 		playlist.showPlaylist();
 //		
 //		// Modify current playlist
-//		int numRemovedSong = playlist.removeAudio(2);
-//		System.out.println("\n=== Playlist after removing " + numRemovedSong + " songs");
-//		playlist.showPlaylist();
-//		
-//		int numRemovedPodcast = playlist.removeAudio(3);
-//		System.out.println("\n=== Playlist after removing " + numRemovedPodcast + " podcasts");
-//		playlist.showPlaylist();
-//		
-//		playlist.addAudio(new Song("Find you", 3.38, "ABC"));
-//		int numRemovedAudiot = playlist.removeAudio(1);
-//		System.out.println("\n=== Playlist after adding a new song and removing " + numRemovedAudiot + " audios=");
-//		playlist.showPlaylist();	
+		int numRemovedSong = playlist.removeAudio(2);
+		System.out.println("\n=== Playlist after removing " + numRemovedSong + " songs");
+		playlist.showPlaylist();
+		
+		int numRemovedPodcast = playlist.removeAudio(3);
+		System.out.println("\n=== Playlist after removing " + numRemovedPodcast + " podcasts");
+		playlist.showPlaylist();
+		
+		playlist.addAudio(new Song("Find you", 3.38, "ABC"));
+		int numRemovedAudiot = playlist.removeAudio(1);
+		System.out.println("\n=== Playlist after adding a new song and removing " + numRemovedAudiot + " audios=");
+		playlist.showPlaylist();	
 		int numError = playlist.removeAudio(0);
 		if(numError == -1) {
 			System.out.println("\nRemove Audio Error: Invalid option!");
