@@ -35,13 +35,13 @@ public class Song extends Audio{
 	// getTitle() to get song's title
 	public String getTitle() {
 //		System.out.println("INSDIE SONG CLASS");
-		return this.title;
+		return super.title;
 	}
 	
 	// getDuration() to get song's duration
 	public double getDuration() {
 //		System.out.println("INSDIE SONG CLASS");
-		return this.duration;
+		return super.duration;
 	}
 	
 	// getDuration() to get song's duration
@@ -59,7 +59,7 @@ public class Song extends Audio{
 	
 	// toString() method to return value of this song
 	public String toString() {
-		return this.getClass().toString() + "->" + this.title + " | " + this.album + " (" + String.format("%.2f", this.duration) +")";
+		return this.getClass().toString() + "->" + super.title + " | " + this.album + " (" + String.format("%.2f", super.duration) +")";
 	}
 	
 	

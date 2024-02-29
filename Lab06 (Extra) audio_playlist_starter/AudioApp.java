@@ -58,13 +58,12 @@ public class AudioApp {
 	public static void testBonus(Playlist playlist) {
 		
 		System.out.println("**************** BONUS ********************************");
-//		ArrayList<Song> songs = playlist.getSongOnly();
-//		songs.get(0).setDuration(4.50);	// update the first song duration
-//		
-//		ArrayList<Podcast> podcasts = playlist.getPodcastOnly();
-//		podcasts.get(podcasts.size() - 1).setDuration(28.0); // update the last podcast duration
-//		System.out.println("\n=== Playlist after updating first song and last podcast duration");
-//		playlist.showPlaylist();
+		ArrayList<Song> songs = playlist.getSongOnly();
+		songs.get(0).setDuration(4.50);	// update the first song duration
+		ArrayList<Podcast> podcasts = playlist.getPodcastOnly();
+		podcasts.get(podcasts.size() - 1).setDuration(28.0); // update the last podcast duration
+		System.out.println("\n=== Playlist after updating first song and last podcast duration");
+		playlist.showPlaylist();
 //		
 //		// Modify current playlist
 //		int numRemovedSong = playlist.removeAudio(2);
@@ -78,8 +77,7 @@ public class AudioApp {
 //		playlist.addAudio(new Song("Find you", 3.38, "ABC"));
 //		int numRemovedAudiot = playlist.removeAudio(1);
 //		System.out.println("\n=== Playlist after adding a new song and removing " + numRemovedAudiot + " audios=");
-//		playlist.showPlaylist();
-//		
+//		playlist.showPlaylist();	
 		int numError = playlist.removeAudio(0);
 		if(numError == -1) {
 			System.out.println("\nRemove Audio Error: Invalid option!");

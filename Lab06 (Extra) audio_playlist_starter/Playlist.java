@@ -122,8 +122,20 @@ public class Playlist {
 	// BONUS: to return all songs in the playlist, if there is no song in the list return empty list
 	
 	public ArrayList<Song> getSongOnly(){
-		// YOUR CODE HERE
-		return null;
+		// YOUR CODE 
+		ArrayList<Song> sumSongs = new ArrayList<>();
+		for(int i = 0; i < list.size(); i++) {
+			if(list.get(i) instanceof Song) {
+				sumSongs.add((Song)list.get(i));
+			}
+		}
+//		for(Audio a : list) {
+//			if(a instanceof Song) {
+//				sumSongs.add((Song)a);
+//			}
+//		}
+//		return sumSongs;
+		return sumSongs;
 		// ------------------------------------
 	}
 	
@@ -131,7 +143,13 @@ public class Playlist {
 	// BONUS: to return all podcasts in the playlist, if there is no podcast in the list return empty list
 	public ArrayList<Podcast> getPodcastOnly(){
 		// YOUR CODE HERE
-		return null;
+		ArrayList <Podcast> sumPod = new ArrayList<>();
+		for(Audio a : list) {
+			if(a instanceof Podcast) {
+				sumPod.add((Podcast)a);
+			}
+		}
+		return sumPod;
 		// ------------------------------------
 	}
 	
