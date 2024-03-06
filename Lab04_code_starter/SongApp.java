@@ -1,4 +1,4 @@
-public class SongApp {
+public class SongApp{
 	public static void main(String[] args) {
 		Playlist myPlaylist = new Playlist("My Favorite Songs Playlist");
 		System.out.println("Welcome to SongAPP");
