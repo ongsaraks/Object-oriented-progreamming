@@ -158,7 +158,7 @@ public class Playlist {
 		for(int i = 0; i < list.size(); i++) {
 		if(opt == 1 && list.get(i) instanceof Audio) {
 			crm = list.size();
-			list.removeAll(list);
+			list.clear();
 		
 		}
 		
