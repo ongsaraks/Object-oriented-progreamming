@@ -8,23 +8,6 @@ abstract class Currency {
 		 this.price = price;
 		 this.typeOut = typeOut;
 	 }
-	public void TakeMoney() {
-        if(this.typeOut==1) {
-        	price /= 0.028;
-            System.out.printf("Your Money is ฿%.2f\n",price);
-            System.out.print("---Thank you---");
-        }
-        else if(this.typeOut==2) {
-        	price /=0.00075;
-            System.out.printf("Your Money is ₩%.2f\n",price);
-            System.out.print("---Thank you---");
-        }
-        else if(this.typeOut==3) {
-        	price /=0.0066;
-            System.out.printf("Your Money is ¥%.2f\n",price);
-            System.out.print("---Thank you---");
-        }
-     
-        }
+	abstract void TakeMoney();
     }
 

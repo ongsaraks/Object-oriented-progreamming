@@ -1,5 +1,8 @@
 import java.util.Scanner;
 public class Baht extends Currency{
+	protected double Dollars = 35.90; // Baht to Dollars
+	protected double Won = 0.027; // Baht to Dollars
+	protected double Yen = 0.24; // Baht to Dollars
 	public Baht(double price, int typeOut) {
 		super(price,typeOut);
 		// TODO Auto-generated constructor stub
@@ -7,17 +10,17 @@ public class Baht extends Currency{
 
 	public void TakeMoney() {
 	    if(super.typeOut==1) {
-	    	price /= 35.90;
+	    	price /= Dollars;
 	        System.out.printf("Your Money is $%.3f\n",price);
 	        System.out.print("---Thank you---");
 	    }
 	    else if(super.typeOut==2) {
-	    	price /= 0.027;
+	    	price /= Won;
 	        System.out.printf("Your Money is ₩%.3f\n",price);
 	        System.out.print("---Thank you---");
 	    }
 	    else if(super.typeOut==3) {
-	    	price /= 0.24;
+	    	price /= Yen;
 	        System.out.printf("Your Money is ¥%.3f\n",price);
 	        System.out.print("---Thank you---");
 	    }
