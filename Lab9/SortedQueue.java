@@ -1,12 +1,12 @@
 
 public class SortedQueue<T extends Comparable<T>> {
 	public SortedQueue() {
-		
+		int T = 0;
 	}
 	public SortedQueue(int capacity) {
-		
+		int T = capacity;
 	}
-	public boolean enqueue(int capacity) {
+	public boolean enqueue(T object) {
 		return false;
 	}
 	public T dequeue() {
