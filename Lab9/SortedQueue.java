@@ -1,10 +1,11 @@
 
 public class SortedQueue<T extends Comparable<T>> {
+		int capacity;
 	public SortedQueue() {
-		int T = 0;
+		this.capacity = 0;
 	}
 	public SortedQueue(int capacity) {
-		int T = capacity;
+		this.capacity = capacity;
 	}
 	public boolean enqueue(T object) {
 		return false;
