@@ -14,7 +14,7 @@ public class SortedQueueTester {
 			else
 			{
 				str.append("Sorted Queue Full:"+Arrays.toString(myQueue.toArray())
-					+" The first element is "+myQueue.peek().toString()+". Cannot enqueue ");
+					+" The first element is "+myQueue.toString()+". Cannot enqueue ");
 			}
 			str.append(n+"\n"+myQueue.toString());
 			System.out.println(str.toString());
