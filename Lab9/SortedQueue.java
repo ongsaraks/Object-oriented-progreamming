@@ -1,6 +1,7 @@
 import java.util.*;
 public class SortedQueue<T extends Comparable<T>> {
 		int capacity;
+		T[] store;
 		ArrayList<T> queue = new ArrayList<T>();
 	public SortedQueue() {
 		this.capacity = 0;
@@ -9,13 +10,14 @@ public class SortedQueue<T extends Comparable<T>> {
 		this.capacity = capacity;
 	}
 	public boolean enqueue(T object) {
-		queue.add(object);
-		if(capacity < queue.size()) {
-			return true;
-		}
-		else {
+	
+		if(queue.size()>= capacity) {
 			return false;
 		}
+		queue.add(object);
+		Collections.sort(queue);
+		return true;
+	
 		
 	}
 	public T dequeue() {
@@ -31,14 +33,16 @@ public class SortedQueue<T extends Comparable<T>> {
 		
 	}
 	public T[] toArray() {
-		return null;
+		 if (queue.isEmpty()) {
+	            return null; // Queue is empty
+	        }
+	        return (T[]) queue.toArray(); 
 		
 	}
 	public String toString() {
 		
 		return "||" + toString() + "||" ;
-		
-	}
+    }
 	
 	
 }
