@@ -1,11 +1,10 @@
-
+import java.util.*;
 public class SortedQueue<T extends Comparable<T>> {
 		int capacity;
-<<<<<<< HEAD
+
 		T[] store;
 		ArrayList<T> queue = new ArrayList<T>();
-=======
->>>>>>> parent of 291263a (Update SortedQueue.java)
+
 	public SortedQueue() {
 		this.capacity = 0;
 	}
@@ -13,7 +12,7 @@ public class SortedQueue<T extends Comparable<T>> {
 		this.capacity = capacity;
 	}
 	public boolean enqueue(T object) {
-<<<<<<< HEAD
+
 	
 		if(queue.size()>= capacity) {
 			return false;
@@ -23,9 +22,7 @@ public class SortedQueue<T extends Comparable<T>> {
 		return true;
 	
 		
-=======
-		return false;
->>>>>>> parent of 291263a (Update SortedQueue.java)
+
 	}
 	public T dequeue() {
 		return null;
@@ -44,15 +41,13 @@ public class SortedQueue<T extends Comparable<T>> {
 		
 	}
 	public String toString() {
-<<<<<<< HEAD
+
 		
 		return "||" + toString() + "||" ;
-    }
-=======
-		return null;
+    
+
 		
 	}
->>>>>>> parent of 291263a (Update SortedQueue.java)
 	
 	
 }
