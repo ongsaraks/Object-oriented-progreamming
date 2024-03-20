@@ -31,17 +31,22 @@ public class SortedQueue<T extends Comparable<T>> {
 		return null;
 		
 	}
-	public T toArray() {
+	public T[] toArray() {
+		@SuppressWarnings("unchecked")
+		T[] array = (T[]) new Object[queue.size()];
 		if(queue.isEmpty()) {
 			return null;
 		}
-		return null;
+		for(T a:queue) {
+			array[0] = a;
+		}
+		return array;
 		
 	}
 	
 	public String toString() {
 		
-		return "||" + queue + "||" ;
+		return "||" + toArray() + "||" ;
 		
 	}
 }
