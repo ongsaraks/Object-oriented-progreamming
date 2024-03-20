@@ -35,6 +35,7 @@ public class SortedQueue<T extends Comparable<T>> {
 		if(queue.isEmpty()) {
 			return null;
 		}
+		return null;
 		
 	}
 	
