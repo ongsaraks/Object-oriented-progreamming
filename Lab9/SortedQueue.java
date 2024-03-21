@@ -42,7 +42,7 @@ public class SortedQueue<T extends Comparable<T>> {
 	}
 	@SuppressWarnings("unchecked")
 	public T[] toArray() {
-		T[] array = (T[]) new Comparable[queue.size()];
+		T[] array =  (T[])new Comparable[queue.size()];
         for (int i = 0; i < queue.size(); i++) {
             array[i] = (T) queue.get(i);
         }
