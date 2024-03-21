@@ -77,6 +77,7 @@ public abstract class Object3D {
 	public boolean canFloat()
 	{
 		//****************** YOUR CODE HERE *************************//
+		
 		return false;
 		//***********************************************************//
 	}

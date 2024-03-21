@@ -1,22 +1,14 @@
-/**
- * Modify this class to make it extends Audio class
- * Also, //comment// any unnecessary attributes and methods to avoid shadow attributes (do not remove them, just comment them out)
- * Note that you cannot add a new method in this class
- * @author MUICT
- *
- */
 
-// File: <FILE NAME>
-// Description: <DESCRIPTION>
-// Lab: <LAB NUMBER e.g., 1, or 2>
+// File: <Ongsa>
+// Description: <Generic type of array>
+// Lab: <9>
 //
-// ID: <YOUR STUDENT ID>
-// Name: <YOUR FULLNAME>
-// Section: <YOUR SECTION e.g., 1, 2, or 3>
+// ID: <6688093>
+// Name: <Ongsa Raksalam>
+// Section: 2
 //
-// On my honor, <YOUR FULLNAME>, this project assignment is my own work
+// On my honor, <Ongsa raksalam>, this project assignment is my own work
 // and I have not provided this code to any other students.
-
 
 public class Song1 extends Audio implements Comparable<Song1>{
 	

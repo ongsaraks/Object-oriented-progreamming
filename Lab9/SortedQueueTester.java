@@ -1,3 +1,15 @@
+
+// File: <Ongsa>
+// Description: <Generic type of array>
+// Lab: <9>
+//
+// ID: <6688093>
+// Name: <Ongsa Raksalam>
+// Section: 2
+//
+// On my honor, <Ongsa raksalam>, this project assignment is my own work
+// and I have not provided this code to any other students.
+
 import java.util.Arrays;
 
 public class SortedQueueTester {
