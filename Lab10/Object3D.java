@@ -76,8 +76,11 @@ public abstract class Object3D {
 	 */
 	public boolean canFloat()
 	{
-		//****************** YOUR CODE HERE *************************//
-		
+		//****************** YOUR CODE HERE *************************//	
+		if(Object3D.DENSITIES[this.getMaterial().ordinal()] < Object3D.DENSITIES[Material.Water.ordinal()]) {
+			return true;
+			
+		}
 		return false;
 		//***********************************************************//
 	}
@@ -88,6 +91,10 @@ public abstract class Object3D {
 	public boolean canFly()
 	{
 		//****************** YOUR CODE HERE *************************//
+		if(Object3D.DENSITIES[this.getMaterial().ordinal()] < Object3D.DENSITIES[Material.Air.ordinal()]) {
+			return true;
+			
+		}
 		return false;
 		//***********************************************************//
 	}
