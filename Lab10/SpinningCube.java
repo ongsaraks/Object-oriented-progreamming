@@ -14,6 +14,6 @@ public class SpinningCube extends Cube implements Animatable {
 
     @Override
     public void animate(double time) {
-        rotationAngle += time * 10; // Simulate rotation by updating angle based on time
+        rotationAngle += time * 10; 
     }
 }
