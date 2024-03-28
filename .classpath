@@ -6,6 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="ElectricCar/src"/>
+	<classpathentry kind="src" path="Lab11"/>
 	<classpathentry kind="src" path="Lab10"/>
 	<classpathentry kind="src" path="Lab9"/>
 	<classpathentry kind="src" path="KMITL"/>
