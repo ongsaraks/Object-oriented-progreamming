@@ -67,6 +67,15 @@ public class StudentTester {
 		System.out.println("Converting WaxDie B to a Sphere with radius: "+String.format("%,.2f", s.getRadius())+" and volume: "+String.format("%,.2f", s.getVolume()));
 		System.out.println("Converting ButterBall Z to a Cube with edge length: "+String.format("%,.2f", c.getEdge())+" and volume: "+String.format("%,.2f", c.getVolume()));
 	}
+	public static void challenge() {
+		Drawable sphere = new Shp("Red Sphere");
+        sphere.draw(); // Output: Drawing a generic shape: Sphere
+
+        SpinningCube cube = new SpinningCube("Blue Cube", Object3D.Material.Wax, 3.0);
+        cube.draw(); // Output: Drawing a spinning cube: SpinningCube, rotation angle: 0.0
+        cube.animate(1.5); // Simulate 1.5 seconds of animation
+        cube.draw(); // Output: Drawing a spinning cube: SpinningCube, rotation angle: 15.0 (assuming time updates rotationAngle)
+	}
 	
 	public static void main(String[] args)
 	{
@@ -74,6 +83,7 @@ public class StudentTester {
 		testTask1();
 		testTask2();
 		testTask3();
+		challenge();
 	}
 	
 }
