@@ -15,7 +15,10 @@ public class WaxDie extends Cube implements Comparable<Object3D>, Meltable{
 			return -1;
 				
 		}
-			return 0;
+		else {
+			return super.getName().compareTo(o.getName());
+		}
+			
 		
 	}
 	@Override
