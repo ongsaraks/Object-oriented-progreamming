@@ -16,7 +16,7 @@ public class Cube extends Object3D{
 	@Override
 	public double getSurface() {
 		// TODO Auto-generated method stub
-		return 6*(edge*edge);
+		return 6.0*(edge*edge);
 	}
 	public double getEdge() {
 		return  edge;
