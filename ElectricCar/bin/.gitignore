@@ -1,4 +1,3 @@
 /ServiceLogProcessor$InvalidServiceRecordException.class
-/WTF.txt
-/ServiceLogProcessor.class
-/services.txt
+/ServiceLogProcessor$InvalidRecordException.class
+/ServiceLogProcessor$ServiceRecord.class

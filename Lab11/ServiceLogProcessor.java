@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.*;
 
 public class ServiceLogProcessor {
 
@@ -14,6 +15,24 @@ public class ServiceLogProcessor {
 
     public void loadServiceRecords(String filename) {
         // TODO: Implement this method to read from the file and populate serviceRecords
+//    	BufferedReader reader = null;
+//    	File file = new File("C:/Users/gifly/Desktop/Object-oriented-progreamming/Lab11/"+filename);
+//    	try {
+//    		reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+//    	}catch(FileNotFoundException e) {
+//    		e.printStackTrace();
+//    	}catch(IOException e) {
+//    		e.printStackTrace();
+//    	}finally {
+//    		try {
+//    			if(reader != null) {
+//    				reader.close();
+//    			}
+//    		}catch(IOException e) {
+//    			e.printStackTrace();
+//    		}
+//    	}
+    	
     }
 
     private boolean validateRecord(String record) {
