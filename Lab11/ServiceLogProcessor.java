@@ -22,8 +22,9 @@ public class ServiceLogProcessor {
     			 String record = reader.nextLine();
     			 if (!record.isEmpty()) {
     				 try {
-    					 validateRecord(record);
-                         serviceRecords.add(record);
+    					 if(validateRecord(record) == true) {
+    						  serviceRecords.add(record); 
+    					 }       
                          }
     				 catch (InvalidServiceRecordException e) {
                      System.out.println("Warning: " + e.getMessage());
@@ -44,16 +45,17 @@ public class ServiceLogProcessor {
     private boolean validateRecord(String record) throws ServiceLogProcessor.InvalidServiceRecordException {
         // TODO: Implement this method to validate individual service record
     	 String[] fields = record.split(" ");
-    	 
-         if (fields.length != 4) {
-             throw new InvalidServiceRecordException("Invalid number of fields in record: " + record);
-         }
-         
-         double cost = Double.parseDouble(fields[3]);
+    	   if (fields.length != 4) {
+               throw new InvalidServiceRecordException("Invalid number of fields in record: " + record);
+           } 
+    	 double cost = Double.parseDouble(fields[3]);
          if (cost < 0) {
+        	 System.out.println("Idiot");
              throw new InvalidServiceRecordException("Negative cost in record: " + record);
+             
          }
          return true;
+  
     }
 
     public double calculateTotalCosts() {
