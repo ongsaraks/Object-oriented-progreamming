@@ -3,12 +3,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ServiceLogProcessor {
+public class ServiceLogProcessorChallenge {
 
     private List<String> serviceRecords;
     private List<String> errorLog;
 
-    public ServiceLogProcessor() {
+    public ServiceLogProcessorChallenge() {
         serviceRecords = new ArrayList<>();
         errorLog = new ArrayList<>();
     }
@@ -32,7 +32,7 @@ public class ServiceLogProcessor {
                          
     				 catch (InvalidServiceRecordException e) {
     				     errorLog.add(record);
-                     errorLog.add("Warning: " + e.getMessage());
+    				     errorLog.add("Warning: " + e.getMessage());
            
                      }
 
@@ -48,7 +48,7 @@ public class ServiceLogProcessor {
     	}
     }
 
-    private boolean validateRecord(String record) throws ServiceLogProcessor.InvalidServiceRecordException {
+    private boolean validateRecord(String record) throws ServiceLogProcessorChallenge.InvalidServiceRecordException {
         // TODO: Implement this method to validate individual service record
     	 String[] fields = record.split(" ");
     	   if (fields.length != 4) {
@@ -66,25 +66,10 @@ public class ServiceLogProcessor {
   
     }
 
-    public double calculateTotalCosts() {
-        // TODO: Implement this method to calculate total costs
-    	double totalCosts = 0.0;
-        for (String record : serviceRecords) {
-            try {
-                String[] fields = record.split(" ");
-                double cost = Double.parseDouble(fields[fields.length - 1]);
-                totalCosts += cost;
-            } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                System.out.println("Error while calculating total costs for record: " + record);
-                e.printStackTrace();
-            }
-        }
-        return totalCosts;
-    }
 
-    public void generateReport() {
+    public void generateReport(String filename) {
         // TODO: Implement this method to print out the report to console and write to a file
-    	try (PrintWriter writer = new PrintWriter(new File("report.txt"))) {
+    	try (PrintWriter writer = new PrintWriter(new File(filename))) {
             System.out.println("Service Report");
             System.out.println("--------------");
             writer.println("Service Report");
@@ -137,9 +122,14 @@ public class ServiceLogProcessor {
 
     // Main method to run the program
     public static void main(String[] args) {
-        ServiceLogProcessor processor = new ServiceLogProcessor();
-        processor.loadServiceRecords("services.txt"); // replace with the actual file name
-        double totalCosts = processor.calculateTotalCosts();
-        processor.generateReport();
+        ServiceLogProcessorChallenge processor = new ServiceLogProcessorChallenge();
+        Scanner str = new Scanner(System.in);
+        System.out.println("Type file name");
+        String file = str.next();
+        processor.loadServiceRecords(file); // replace with the actual file name
+//        double totalCosts = processor.calculateTotalCosts();
+        System.out.println("Type output location(.txt only)");
+        String fileout = str.next();
+        processor.generateReport(fileout);
     }
 }
