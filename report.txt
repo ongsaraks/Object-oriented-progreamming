@@ -15,5 +15,5 @@ Tax: $51.83
 Total: $740.44
 
 Records with errors:
-EFG1234 BrakeReplacement BrakePads,BrakeDiscs -300.00
-Warning: Negative cost in record: EFG1234 BrakeReplacement BrakePads,BrakeDiscs -300.00
+EFG1234 BrakeReplacement BrakePads,BrakeDiscs -s300.00
+Warning: Cost cant be negative: EFG1234 BrakeReplacement BrakePads,BrakeDiscs -s300.00

@@ -60,7 +60,7 @@ public class ServiceLogProcessor {
           	 	throw new InvalidServiceRecordException("Negative cost in record: " + record);
       		 	} 
     	   }catch(NumberFormatException e){
-    		   throw new InvalidServiceRecordException("Cost cant be negative");
+    		   throw new InvalidServiceRecordException("Cost cant be negative: " + record);
     	   }
          return true;
   

@@ -65,6 +65,21 @@ public class ServiceLogProcessorChallenge {
          return true;
   
     }
+    public double calculateTotalCosts() {
+        // TODO: Implement this method to calculate total costs
+    	double totalCosts = 0.0;
+        for (String record : serviceRecords) {
+            try {
+                String[] fields = record.split(" ");
+                double cost = Double.parseDouble(fields[fields.length - 1]);
+                totalCosts += cost;
+            } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+                System.out.println("Error while calculating total costs for record: " + record);
+                e.printStackTrace();
+            }
+        }
+        return totalCosts;
+    }
 
 
     public void generateReport(String filename) {
@@ -127,7 +142,7 @@ public class ServiceLogProcessorChallenge {
         System.out.println("Type file name");
         String file = str.next();
         processor.loadServiceRecords(file); // replace with the actual file name
-//        double totalCosts = processor.calculateTotalCosts();
+        double totalCosts = processor.calculateTotalCosts();
         System.out.println("Type output location(.txt only)");
         String fileout = str.next();
         processor.generateReport(fileout);
