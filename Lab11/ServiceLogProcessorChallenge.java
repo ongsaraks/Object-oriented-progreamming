@@ -84,7 +84,8 @@ public class ServiceLogProcessorChallenge {
 
     public void generateReport(String filename) {
         // TODO: Implement this method to print out the report to console and write to a file
-    	try (PrintWriter writer = new PrintWriter(new File(filename))) {
+    	try  {
+    		PrintWriter writer = new PrintWriter(new File(filename));
             System.out.println("Service Report");
             System.out.println("--------------");
             writer.println("Service Report");
