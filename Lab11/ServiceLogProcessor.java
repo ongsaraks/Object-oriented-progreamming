@@ -31,7 +31,7 @@ public class ServiceLogProcessor {
     					 }       
                          
     				 catch (InvalidServiceRecordException e) {
-    				     errorLog.add(record);
+    				   errorLog.add(record);
                      errorLog.add("Warning: " + e.getMessage());
            
                      }
@@ -143,3 +143,6 @@ public class ServiceLogProcessor {
         processor.generateReport();
     }
 }
+
+
+

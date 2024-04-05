@@ -140,11 +140,11 @@ public class ServiceLogProcessorChallenge {
     public static void main(String[] args) {
         ServiceLogProcessorChallenge processor = new ServiceLogProcessorChallenge();
         Scanner str = new Scanner(System.in);
-        System.out.println("Type file name");
+        System.out.print("Type file name");
         String file = str.next();
         processor.loadServiceRecords(file); // replace with the actual file name
         double totalCosts = processor.calculateTotalCosts();
-        System.out.println("Type output location(.txt only)");
+        System.out.print("Type output location(.txt only)");
         String fileout = str.next();
         processor.generateReport(fileout);
     }

@@ -11,4 +11,4 @@ STU5678 OilChange - 29.99
 VWX9012 HeadlightReplacement Bulbs 49.99
 YZA3456 TireRotation - 19.99
 BCD6789 FullInspection Brakes,Tires,Fluids 200.00
-EFG1234 BrakeReplacement BrakePads,BrakeDiscs -300.00
+EFG1234 BrakeReplacement BrakePads,BrakeDiscs 300.00

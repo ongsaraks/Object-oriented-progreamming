@@ -10,10 +10,9 @@ STU5678 OilChange - 29.99
 VWX9012 HeadlightReplacement Bulbs 49.99
 YZA3456 TireRotation - 19.99
 BCD6789 FullInspection Brakes,Tires,Fluids 200.00
-Subtotal: $688.61
-Tax: $51.83
-Total: $740.44
+EFG1234 BrakeReplacement BrakePads,BrakeDiscs 300.00
+Subtotal: $967.61
+Tax: $72.83
+Total: $1040.44
 
-Records with errors:
-EFG1234 BrakeReplacement BrakePads,BrakeDiscs -s300.00
-Warning: Cost cant be negative: EFG1234 BrakeReplacement BrakePads,BrakeDiscs -s300.00
+No records with errors found.
