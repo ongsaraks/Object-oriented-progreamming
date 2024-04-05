@@ -77,7 +77,7 @@ public abstract class Object3D {
 	public boolean canFloat()
 	{
 		//****************** YOUR CODE HERE *************************//	
-		if(Object3D.=DENSITIES[this.getMaterial().ordinal()] < Object3D.DENSITIES[Material.Water.ordinal()]) {
+		if(Object3D.DENSITIES[this.getMaterial().ordinal()] < Object3D.DENSITIES[Material.Water.ordinal()]) {
 			return true;
 			
 		}
