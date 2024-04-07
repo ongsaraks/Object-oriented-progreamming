@@ -29,6 +29,13 @@ public class ForestFireAnalysis {
     private static List<String[]> readCsv(String filePath) throws IOException {
         // Implement reading and parsing CSV data
 	// YOUR CODE HERE
+    	try {
+    		BufferedReader file = new BufferedReader(new FileReader(filePath));
+    		
+    	}catch(IOException e){
+    		e.printStackTrace();
+    	}
+    	
         return new ArrayList<>();
     }
 
