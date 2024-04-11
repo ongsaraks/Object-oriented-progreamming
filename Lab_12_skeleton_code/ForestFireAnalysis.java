@@ -2,7 +2,17 @@ import java.io.*;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+//File: <ForestFireAnalysis>
+//Description: <Read csv file and find average>
+//Assignment Number: <Lab 12 and challenge>
+//
+//ID: <6688093>
+//Name: Ongsa Raksalam
+//Section: 2
+//Grader: ICE
+//
+//On my honor, Ongsa Raksalam, this lab assignment is my own work
+//and I have not provided this code to any other students.
 public class ForestFireAnalysis {
 
     public static void main(String[] args) {
@@ -26,10 +36,11 @@ public class ForestFireAnalysis {
         // Implement reading and parsing CSV data
 	// YOUR CODE HERE
     	List<String[]> keep = new ArrayList<>();
-    	try (BufferedReader file = new BufferedReader(new FileReader(filePath))) {
+    	try (BufferedReader file = new BufferedReader(new FileReader(filePath))) {  
+    		file.readLine();
     		String line;
     		while((line = file.readLine()) != null) {
-//    			System.out.println(line);
+    			System.out.println(line);
     			String[] row = line.split(",");
     			keep.add(row);
     		}
@@ -77,7 +88,6 @@ public class ForestFireAnalysis {
 		// YOUR CODE HERE
 		
 		String[] regexPattern = { "feb", "apr", "jan" };
-
 		for (String text : regexPattern) {
 
 			int count = 0;
@@ -118,7 +128,6 @@ public class ForestFireAnalysis {
 			}
 		}
 //		String[] regexPattern = { "feb", "apr", "jan" };
-		
 		for(int i = 0 ; i < regexPattern.size()-1 ; i++) {
 			for(int j = i+1 ; j < regexPattern.size() ; j++) {
 				String m1 = regexPattern.get(i);
