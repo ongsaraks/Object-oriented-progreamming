@@ -46,24 +46,22 @@ public class ForestFireAnalysis {
         // Implement filtering logic based on Regular Expressions
 	// YOUR CODE HERE
     	List<String[]> dataList = new ArrayList<String[]>();
-
-		for (String[] str : data) {
-			Pattern p = Pattern.compile(regexPattern);
-			Matcher m = p.matcher(str[2]);
-			if (m.matches()) {
-				dataList.add(str);
-			}
-		}
-//    	for (int i = 0; i < data.size()-1; i++) {
-//    			Pattern p = Pattern.compile(regexPattern);
-//    			Matcher m = p.matcher(data.get(i).);
-//    			if (m.matches()) {
-//    				dataList.add(data);
-//    			}
-//    		
-//			
+//		for (String[] str : data) {
+//			Pattern p = Pattern.compile(regexPattern);
+//			Matcher m = p.matcher(str[2]);
+//			if (m.matches()) {
+//				dataList.add(str);
+//			}
 //		}
-
+    	for (int i = 0; i < data.size()-1; i++) {
+    			Pattern p = Pattern.compile(regexPattern);
+    			Matcher m = p.matcher(data.get(i)[2]);
+    			if (m.matches()) {
+    				dataList.add(data.get(i));
+    			}
+    		
+			
+		}
 		return dataList;
     	  
     }
