@@ -20,7 +20,7 @@ public class ServiceLogProcessor {
     		reader = new Scanner(new File(filename));
     		while(reader.hasNextLine()) {
     			 String record = reader.nextLine();
-    			 if(record.isEmpty() == false && record.contains("#")) {
+    			 if(!record.isEmpty()&& record.contains("#")) {
     				 continue;
     				 
     			 }
@@ -28,6 +28,7 @@ public class ServiceLogProcessor {
     			 	try {
     					 validateRecord(record);
     					 serviceRecords.add(record); 
+    					 System.out.println(record);
     					 }       
                          
     				 catch (InvalidServiceRecordException e) {
