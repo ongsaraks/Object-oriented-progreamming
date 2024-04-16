@@ -139,7 +139,7 @@ public class ServiceLogProcessor {
     // Main method to run the program
     public static void main(String[] args) {
         ServiceLogProcessor processor = new ServiceLogProcessor();
-        processor.loadServiceRecords("services.txt"); // replace with the actual file name
+        processor.loadServiceRecords("grid.txt"); // replace with the actual file name
         double totalCosts = processor.calculateTotalCosts();
         processor.generateReport();
     }

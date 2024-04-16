@@ -1,18 +1,21 @@
 Service Report
 --------------
-ABC1234 OilChange - 29.99
-DEF5678 TireRotation - 19.99
-GHI9012 BrakeInspection BrakePads 120.50
-JKL3456 TransmissionFluidChange - 89.99
-MNO7890 BatteryReplacement Battery 110.00
-PQR1234 ACService AirFilter 70.00
-STU5678 OilChange - 29.99
-VWX9012 HeadlightReplacement Bulbs 49.99
-YZA3456 TireRotation - 19.99
-BCD6789 FullInspection Brakes,Tires,Fluids 200.00
-EFG1234 BrakeReplacement BrakePads,BrakeDiscs 300.00
-Subtotal: $967.61
-Tax: $72.83
-Total: $1040.44
+Subtotal: $0.00
+Tax: $0.00
+Total: $0.00
 
-No records with errors found.
+Records with errors:
+5 5 
+Warning: Invalid number of fields in record: 5 5 
+0 1 0 2 2 
+Warning: Invalid number of fields in record: 0 1 0 2 2 
+1 1 1 0 0 
+Warning: Invalid number of fields in record: 1 1 1 0 0 
+0 0 0 1 1 
+Warning: Invalid number of fields in record: 0 0 0 1 1 
+2 0 1 0 1 
+Warning: Invalid number of fields in record: 2 0 1 0 1 
+0 2 0 0 0 
+Warning: Invalid number of fields in record: 0 2 0 0 0 
+1 1 
+Warning: Invalid number of fields in record: 1 1 

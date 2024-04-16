@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.Scanner;
+import java.io.BufferedReader;
 
 public class FireDetectionProcessor {
 
@@ -13,21 +14,26 @@ public class FireDetectionProcessor {
     private static void processFile(String filePath) {
     	ArrayList<String> record = new ArrayList<>();
     	int count = 0;
-        try {
-            File file = new File(filePath);
-            Scanner scanner = new Scanner(file);
-            String line;
-            while(scanner.hasNextLine()) {
-            	line = scanner.nextLine();
-            		record.add(line);
-            		count++;
-            		System.out.println(record);
-         
-            	
-            	
-            	
-            }
-            System.out.println("The dimenion is: "+ count);
+        	try (Scanner scanner = new Scanner(new File(filePath))){
+            	String line;
+            	while(scanner.hasNextLine()) {
+            		line = scanner.nextLine();
+            		line.split(" ");
+            		if(line.length() != 4) {
+            			record.add(line);
+            			System.out.println(line);
+            			count++;
+            		}
+            		else {
+            			count++;
+            			System.out.println("Fuck off");
+            			
+            		}
+            	}
+//              System.out.println("The dimenion is: "+ count);
+//              for(String n : record) {
+//              	System.out.println(n);
+//              }
             // Read grid dimensions
             // Read grid data
             // Read starting point
