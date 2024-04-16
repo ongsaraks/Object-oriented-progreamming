@@ -21,13 +21,7 @@ public class FireDetectionProcessor {
             		line.split(" ");
             		if(line.length() != 4) {
             			record.add(line);
-            			System.out.println(line);
             			count++;
-            		}
-            		else {
-            			count++;
-            			System.out.println("Fuck off");
-            			
             		}
             	}
 //              System.out.println("The dimenion is: "+ count);
@@ -44,6 +38,7 @@ public class FireDetectionProcessor {
             System.err.println("File not found: " + filePath);
         }
     }
+   
 
     // Implement methods for processing the grid and printing the grid
 }
