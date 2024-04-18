@@ -6,7 +6,10 @@ import java.util.Scanner;
 public class FireDetectionProcessor {
 
 	public static ArrayList<String> record = new ArrayList<>();
-	private static String line;
+	
+
+
+
 
     public static void main(String[] args) {
         String filePath = "grid.txt"; // Adjust path as necessary
@@ -21,31 +24,27 @@ public class FireDetectionProcessor {
             Scanner scanner = new Scanner(file);
             int row = scanner.nextInt();
             int col = scanner.nextInt();
-            scanner.nextLine();
-            while(scanner.hasNextInt() && record.size() < row) {
-            	line = scanner.nextLine();
-            	String[] keep = line.split(" ");  
-            	if(keep.length == row) {
-                	record.add(line);
-            	}
+        	int[][] data = new int[row][col];
+        	int S;
+        	int E;
            
-            	
-            
+            for(int i = 0; i < row; i++) {
+            	for(int j = 0; j < col; j++) {
+            		data[i][j] = scanner.nextInt();
+            	}
             }
-            // Read grid dimensions
-            // Read grid data
-            // Read starting point
-            // You may need to add additional methods or logic here
-          
+            for(int i = 0; i < row; i++) {
+            	for(int j = 0; j < col; j++) {
+            		System.out.print(data[i][j]);
+            	}
+            	System.out.println();
+            }
+            S = scanner.nextInt();
+            E = scanner.nextInt();
             scanner.close();
         } catch (FileNotFoundException e) {
             System.err.println("File not found: " + filePath);
         }
-    	
-//    		System.out.println(record);
-    	for(String n : record) {
-    		System.out.println(n);
-    	}
     	
     	
     }
