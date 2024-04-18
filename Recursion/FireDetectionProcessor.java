@@ -20,14 +20,15 @@ public class FireDetectionProcessor {
 		int count = 0;
 		try (Scanner scanner = new Scanner(new File(filePath))) {
 			String line;
+			line = scanner.nextLine();
+			String[] dimension = line.split(" ");
+			row = Integer.parseInt(dimension[0]);
+			col = Integer.parseInt(dimension[1]);
 			while (scanner.hasNextLine()) {
 				line = scanner.nextLine();
 				String[] keep = line.split(" ");
-				if (keep.length == 2) {
-					row = Integer.parseInt(keep[0]);
-					col = Integer.parseInt(keep[1]);
-				} else if (keep.length == col) {
-					record.add(line.split(" "));
+				if (keep.length == row) {
+					record.add(keep);
 				}
 
 			}
@@ -41,8 +42,13 @@ public class FireDetectionProcessor {
 		} catch (FileNotFoundException e) {
 			System.err.println("File not found: " + filePath);
 		}
-		System.out.println(row);
-		System.out.println(col);
+		for(String[] n : record) {
+			System.out.print(n[2]);
+		}
+//		System.out.println(row);
+//		System.out.println(col);
+			
+		
 
 	}
 
