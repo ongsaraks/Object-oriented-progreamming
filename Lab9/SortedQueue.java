@@ -37,7 +37,7 @@ public class SortedQueue<T extends Comparable<T>> {
 			return null;
 			
 		}
-		return  queue.remove(0);
+		return queue.remove(0);
 	
 		
 
@@ -68,9 +68,9 @@ public class SortedQueue<T extends Comparable<T>> {
 		String str = "||";
 		for(int i = 0; i < queue.size();i++) {
 			str += queue.get(i);
-			if(queue.size() > 1 && i < queue.size()-1) {
+//			if(queue.size() > 1 && i < queue.size()-1) {
 				str += "->";
-			}
+//			}
 		}
 		str+= "||";
 		return str;

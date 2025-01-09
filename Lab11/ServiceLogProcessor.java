@@ -17,7 +17,7 @@ public class ServiceLogProcessor {
         // TODO: Implement this method to read from the file and populate serviceRecords
     	Scanner reader = null;
     	try {
-    		reader = new Scanner(new File(filename));
+    		reader = new Scanner(new FileReader(filename));
     		while(reader.hasNextLine()) {
     			 String record = reader.nextLine();
     			 if(!record.isEmpty()&& record.contains("#")) {
@@ -139,7 +139,7 @@ public class ServiceLogProcessor {
     // Main method to run the program
     public static void main(String[] args) {
         ServiceLogProcessor processor = new ServiceLogProcessor();
-        processor.loadServiceRecords("servi.txt"); // replace with the actual file name
+        processor.loadServiceRecords("services.txt"); // replace with the actual file name
         double totalCosts = processor.calculateTotalCosts();
         processor.generateReport();
     }
